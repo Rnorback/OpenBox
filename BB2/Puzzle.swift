@@ -9,7 +9,5 @@
 import UIKit
 
 protocol Puzzle {
-    var lights:[Light] {get}
-    var lightColor:UIColor {get}
-    var lightPositions:[GridPosition] {get}
+    var lightGroup:LightGroup {get}
 }

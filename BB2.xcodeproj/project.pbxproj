@@ -14,6 +14,7 @@
 		934EBB281E309B5C005E44FB /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB271E309B5C005E44FB /* Values.swift */; };
 		934EBB2A1E309DE2005E44FB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB291E309DE2005E44FB /* Colors.swift */; };
 		934EBB2C1E30A3D3005E44FB /* HeartRatePuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB2B1E30A3D3005E44FB /* HeartRatePuzzle.swift */; };
+		9385C0A71E318E1E001DF453 /* LightGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385C0A61E318E1E001DF453 /* LightGroup.swift */; };
 		9386AA411E3045D6007239C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386AA401E3045D6007239C8 /* AppDelegate.swift */; };
 		9386AA431E3045D6007239C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386AA421E3045D6007239C8 /* ViewController.swift */; };
 		9386AA461E3045D6007239C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9386AA441E3045D6007239C8 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		934EBB271E309B5C005E44FB /* Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
 		934EBB291E309DE2005E44FB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		934EBB2B1E30A3D3005E44FB /* HeartRatePuzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRatePuzzle.swift; sourceTree = "<group>"; };
+		9385C0A61E318E1E001DF453 /* LightGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightGroup.swift; sourceTree = "<group>"; };
 		9386AA3D1E3045D6007239C8 /* BB2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BB2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9386AA401E3045D6007239C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9386AA421E3045D6007239C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9385C0A81E3191F7001DF453 /* Puzzles */ = {
+			isa = PBXGroup;
+			children = (
+				934EBB1F1E3072EB005E44FB /* Puzzle.swift */,
+				934EBB251E309A45005E44FB /* ReadingPuzzle.swift */,
+				934EBB2B1E30A3D3005E44FB /* HeartRatePuzzle.swift */,
+			);
+			name = Puzzles;
+			sourceTree = "<group>";
+		};
+		9385C0A91E319210001DF453 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				934EBB271E309B5C005E44FB /* Values.swift */,
+				934EBB291E309DE2005E44FB /* Colors.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		9385C0AA1E319220001DF453 /* Assets/Launch/Plist */ = {
+			isa = PBXGroup;
+			children = (
+				9386AA471E3045D6007239C8 /* Assets.xcassets */,
+				9386AA491E3045D6007239C8 /* LaunchScreen.storyboard */,
+				9386AA4C1E3045D6007239C8 /* Info.plist */,
+			);
+			name = Assets/Launch/Plist;
+			sourceTree = "<group>";
+		};
 		9386AA341E3045D6007239C8 = {
 			isa = PBXGroup;
 			children = (
@@ -115,18 +146,14 @@
 			children = (
 				9386AA401E3045D6007239C8 /* AppDelegate.swift */,
 				9386AA421E3045D6007239C8 /* ViewController.swift */,
+				9386AA441E3045D6007239C8 /* Main.storyboard */,
 				9386AA6E1E304A1B007239C8 /* Dot.swift */,
 				934EBB211E3081AD005E44FB /* Light.swift */,
+				9385C0A61E318E1E001DF453 /* LightGroup.swift */,
 				934EBB231E3082E0005E44FB /* GridPosition.swift */,
-				934EBB1F1E3072EB005E44FB /* Puzzle.swift */,
-				934EBB251E309A45005E44FB /* ReadingPuzzle.swift */,
-				934EBB2B1E30A3D3005E44FB /* HeartRatePuzzle.swift */,
-				934EBB271E309B5C005E44FB /* Values.swift */,
-				934EBB291E309DE2005E44FB /* Colors.swift */,
-				9386AA441E3045D6007239C8 /* Main.storyboard */,
-				9386AA471E3045D6007239C8 /* Assets.xcassets */,
-				9386AA491E3045D6007239C8 /* LaunchScreen.storyboard */,
-				9386AA4C1E3045D6007239C8 /* Info.plist */,
+				9385C0A81E3191F7001DF453 /* Puzzles */,
+				9385C0A91E319210001DF453 /* Constants */,
+				9385C0AA1E319220001DF453 /* Assets/Launch/Plist */,
 			);
 			path = BB2;
 			sourceTree = "<group>";
@@ -292,6 +319,7 @@
 				934EBB241E3082E0005E44FB /* GridPosition.swift in Sources */,
 				934EBB2C1E30A3D3005E44FB /* HeartRatePuzzle.swift in Sources */,
 				934EBB261E309A45005E44FB /* ReadingPuzzle.swift in Sources */,
+				9385C0A71E318E1E001DF453 /* LightGroup.swift in Sources */,
 				934EBB201E3072EB005E44FB /* Puzzle.swift in Sources */,
 				9386AA411E3045D6007239C8 /* AppDelegate.swift in Sources */,
 				9386AA6F1E304A1B007239C8 /* Dot.swift in Sources */,

@@ -31,8 +31,6 @@ class Dot: CAShapeLayer {
         strokeColor = UIColor.clear.cgColor
         //you can change the line width
         lineWidth = 1.0
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

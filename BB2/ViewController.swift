@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         let puzzles:[Puzzle] = [ReadingPuzzle(), HeartRatePuzzle()]
         
         for puzzle in puzzles {
-            for light in puzzle.lights {
+            for light in puzzle.lightGroup.lights {
                 scrollView.addSubview(light)
             }
         }
