@@ -11,6 +11,14 @@ import Foundation
 enum PuzzleId: String {
     case reading
     case heartRate
-//    case bluetooth
     case coolPlaces
+    //    case bluetooth
+    
+//    var notificationOn: NSNotification.Name {
+//        return NSNotification.Name(rawValue: self.rawValue + "On")
+//    }
+//    
+//    var notificationOff: NSNotification.Name {
+//        return NSNotification.Name(rawValue: self.rawValue + "Off")
+//    }
 }

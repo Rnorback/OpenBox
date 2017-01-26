@@ -20,6 +20,7 @@ class LightGroup {
         self.color = color
         self.puzzleId = puzzleId
         setupLights()
+        addTargets()
     }
     
     func setupLights() {
@@ -32,5 +33,44 @@ class LightGroup {
             lights.append(light)
         }
     }
+}
+
+//MARK: - Targets
+extension LightGroup {
     
+    func addTargets() {
+        for light in lights {
+            light.addTarget(
+                self,
+                action: #selector(lightActivated(button:)),
+                for: .touchUpInside
+            )
+            light.addTarget(
+                self,
+                action: #selector(lightPressed(button:)),
+                for: [.touchDown, .touchDragInside]
+            )
+            light.addTarget(
+                self,
+                action: #selector(lightReleased(button:)),
+                for: .touchDragOutside
+            )
+        }
+    }
+    
+    @objc fileprivate func lightPressed(button:LightButton) {
+        for light in lights {
+            light.shrink()
+        }
+    }
+    
+    @objc fileprivate func lightReleased(button:LightButton) {
+        for light in lights {
+            light.returnToNormal()
+        }
+    }
+    
+    @objc fileprivate func lightActivated(button:LightButton) {
+        button.activate()
+    }
 }
