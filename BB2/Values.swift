@@ -9,10 +9,20 @@
 import Foundation
 
 struct Values {
-    static let dotsAcross:Int = 12
-    static let dotsDown:Int = 20
+    ///Total dots across the normal payable area
+    static let dotsAcross:Int = 14
+    static let dotsDown:Int = 22
     
+    ///The offset from the top left of the playable area
+    static let dotsOffsetAcross:Int = 3
+    static let dotsOffsetDown:Int = 5
+    
+    ///Dot distance from edge
     static let dotsBuffer:Int = 8
+    
+    ///Distance between dots
     static let betweenDots:Int = 40
+    
+    ///Size of the lights
     static var lightWidth:Int = 36
 }

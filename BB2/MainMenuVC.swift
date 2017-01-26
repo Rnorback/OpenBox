@@ -59,9 +59,20 @@ class MainMenuVC: UIViewController {
         )
     }
     
+    var playableOffsetX:CGFloat {
+        return contentViewBuffer + CGFloat(Values.dotsOffsetAcross * betweenDots)
+    }
+    
+    var playableOffsetY:CGFloat {
+        return contentViewBuffer + CGFloat(Values.dotsOffsetDown * betweenDots)
+    }
+    
     ///Where the scrollable area is focused at first
     var contentOffset:CGPoint {
-        return CGPoint(x: contentViewBuffer, y: contentViewBuffer)
+        return CGPoint(
+            x: playableOffsetX,
+            y: playableOffsetY
+        )
     }
     
     var scrollView:UIScrollView!
@@ -95,7 +106,7 @@ extension MainMenuVC {
         scrollView.backgroundColor = UIColor.black
         scrollView.contentSize = contentViewSize
         scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        //scrollView.contentOffset = contentOffset
+        scrollView.contentOffset = contentOffset
         scrollView.contentInset = contentInset
         view.addSubview(scrollView)
     }
