@@ -13,12 +13,4 @@ enum PuzzleId: String {
     case heartRate
     case coolPlaces
     //    case bluetooth
-    
-//    var notificationOn: NSNotification.Name {
-//        return NSNotification.Name(rawValue: self.rawValue + "On")
-//    }
-//    
-//    var notificationOff: NSNotification.Name {
-//        return NSNotification.Name(rawValue: self.rawValue + "Off")
-//    }
 }

@@ -22,17 +22,11 @@ class LightButton: UIButton {
         self.center = gridPos.center
         self.backgroundColor = color
         self.layer.cornerRadius = 10
-//        addTargets()
-//        addObservers()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-//    deinit {
-//        removeObservers()
-//    }
     
     func shrink() {
         UIView.animate(withDuration: duration) { [weak self] in
@@ -54,40 +48,3 @@ class LightButton: UIButton {
         })
     }
 }
-
-////MARK: - Notifications
-//extension LightButton {
-//    
-//    fileprivate func addObservers() {
-//        for name in [puzzleId.notificationOn, puzzleId.notificationOff] {
-//            NotificationCenter.default.addObserver(
-//                self,
-//                selector: #selector(LightButton.handle(withNotification:)),
-//                name: name,
-//                object: nil //might want to pass in other lights?
-//            )
-//        }
-//    }
-//    
-//    fileprivate func removeObservers() {
-//        NotificationCenter.default.removeObserver(self)
-//    }
-//    
-//    @objc fileprivate func handle(withNotification notification:Notification) {
-//        
-//        switch notification.name {
-//        case puzzleId.notificationOn:
-//            shrink()
-//        case puzzleId.notificationOff:
-//            returnToNormal()
-//        default:
-//            break
-//        }
-//    }
-//    
-//    //listen for starting signal
-//    //then animate the view to get smaller (just once)
-//    //listen for ending signal
-//    //then animate the view to get bigger
-//    
-//}
