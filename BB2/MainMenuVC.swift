@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainMenuVC.swift
 //  BB2
 //
 //  Created by Rob Norback on 1/18/17.
@@ -8,7 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainMenuVC: UIViewController {
+    
+    let puzzles:[Puzzle] = [
+        ReadingPuzzle(),
+        HeartRatePuzzle(),
+        CoolPlacesPuzzle()
+    ]
     
     var dotsAcross:Int {
         return Values.dotsAcross
@@ -70,14 +76,9 @@ class ViewController: UIViewController {
 }
 
 //MARK: - View Loading Helpers
-extension ViewController {
+extension MainMenuVC {
 
     func placeLightButtons() {
-        let puzzles:[Puzzle] = [
-            ReadingPuzzle(),
-            HeartRatePuzzle()
-        ]
-        
         for puzzle in puzzles {
             for light in puzzle.lightGroup.lights {
                 light.onClick = { [weak self] in
@@ -114,11 +115,12 @@ extension ViewController {
     }
 }
 
-extension ViewController: SegueHandlerType {
+extension MainMenuVC: SegueHandlerType {
     
     enum SegueIdentifier : String {
         case showReading
         case showHeartRate
+        case showCoolPlaces
         
         init(puzzleId:PuzzleId) {
             switch puzzleId {
@@ -126,6 +128,8 @@ extension ViewController: SegueHandlerType {
                 self = .showReading
             case .heartRate:
                 self = .showHeartRate
+            case .coolPlaces:
+                self = .showCoolPlaces
             }
         }
     }
