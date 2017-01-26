@@ -35,9 +35,19 @@ class LightButton: UIButton {
         }
     }
     
-    func returnToNormal() {
+    func toNormalSize() {
         UIView.animate(withDuration: duration) { [weak self] in
             self?.transform = .identity
+        }
+    }
+    
+    func toNormalSizePromise() -> Promise<Void> {
+        return Promise { fulfill, reject in
+            UIView.animate(withDuration: duration, animations: { [weak self] in
+                self?.transform = .identity
+            }, completion: { (success) in
+                success ? fulfill() : reject(AnimationError.failedToComplete)
+            })
         }
     }
 }
