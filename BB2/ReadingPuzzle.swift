@@ -10,6 +10,7 @@ import UIKit
 
 class ReadingPuzzle: Puzzle {
     
+    let puzzleId:PuzzleId = .reading
     private(set) var lightGroup:LightGroup
     
     init() {
@@ -21,8 +22,7 @@ class ReadingPuzzle: Puzzle {
                 GridPosition(x: 7, y: 13)
             ],
             color: UIColor(red: 0.953, green: 0.647, blue: 0.212, alpha: 1.00),
-            signal: "ReadingPuzzle"
+            puzzleId: puzzleId
         )
-        
     }
 }

@@ -10,29 +10,27 @@ import UIKit
 
 class LightGroup {
     
-    private(set) var lights:[Light] = []
+    private(set) var lights:[LightButton] = []
     private(set) var color:UIColor
     private(set) var positions:[GridPosition]
-    private(set) var signal:String
+    private(set) var puzzleId:PuzzleId
     
-    
-    
-    init(positions:[GridPosition], color:UIColor, signal:String) {
+    init(positions:[GridPosition], color:UIColor, puzzleId:PuzzleId) {
         self.positions = positions
         self.color = color
-        self.signal = signal
+        self.puzzleId = puzzleId
         setupLights()
     }
     
     func setupLights() {
         for pos in positions {
-            let light = Light(
+            let light = LightButton(
                 gridPos: pos,
                 color: color,
-                signal: signal
+                puzzleId: puzzleId
             )
             lights.append(light)
         }
     }
-
+    
 }

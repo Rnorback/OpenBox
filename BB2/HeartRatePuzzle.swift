@@ -10,6 +10,7 @@ import UIKit
 
 class HeartRatePuzzle: Puzzle {
     
+    let puzzleId: PuzzleId = .heartRate
     private(set) var lightGroup:LightGroup
     
     init() {
@@ -20,7 +21,7 @@ class HeartRatePuzzle: Puzzle {
                 GridPosition(x: 7, y: 9)
             ],
             color: UIColor(red: 0.800, green: 0.267, blue: 0.267, alpha: 1.00),
-            signal: "ReadingPuzzle"
+            puzzleId: puzzleId
         )
     }
 }
