@@ -10,4 +10,5 @@ import UIKit
 
 protocol Puzzle {
     var lightGroup:LightGroup {get}
+    var puzzleId:PuzzleId {get}
 }
