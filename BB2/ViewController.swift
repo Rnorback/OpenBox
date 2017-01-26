@@ -62,20 +62,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         drawScrollView()
         placeDots()
-        placeLights()
+        placeLightButtons()
     }
-    
-    func placeLights() {
-        let puzzles:[Puzzle] = [ReadingPuzzle(), HeartRatePuzzle()]
+}
+
+//MARK: - View Loading Helpers
+extension ViewController {
+
+    func placeLightButtons() {
+        let puzzles:[Puzzle] = [
+            ReadingPuzzle(),
+            HeartRatePuzzle()
+        ]
         
         for puzzle in puzzles {
             for light in puzzle.lightGroup.lights {
+                light.onClick = { [weak self] in
+                    let identifier = SegueIdentifier(puzzleId: light.puzzleId)
+                    self?.performSegue(withIdentifier: identifier, sender: self)
+                }
                 scrollView.addSubview(light)
             }
         }
-        
     }
     
     func drawScrollView() {
@@ -102,4 +113,23 @@ class ViewController: UIViewController {
         }
     }
 }
+
+extension ViewController: SegueHandlerType {
+    
+    enum SegueIdentifier : String {
+        case showReading
+        case showHeartRate
+        
+        init(puzzleId:PuzzleId) {
+            switch puzzleId {
+            case .reading:
+                self = .showReading
+            case .heartRate:
+                self = .showHeartRate
+            }
+        }
+    }
+}
+
+
 
