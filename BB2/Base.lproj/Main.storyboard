@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main MenuVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController providesPresentationContextTransitionStyle="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="BB2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController providesPresentationContextTransitionStyle="YES" id="BYZ-38-t0r" customClass="MainMenuVC" customModule="BB2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,16 +23,17 @@
                     <connections>
                         <segue destination="ShW-yg-mB3" kind="show" identifier="showReading" id="e26-iP-GEr"/>
                         <segue destination="Lfz-vG-ABa" kind="show" identifier="showHeartRate" id="mLq-1N-DuN"/>
+                        <segue destination="8hO-Xn-VBY" kind="show" identifier="showCoolPlaces" id="dBJ-YS-gMf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Reading PuzzleVC-->
         <scene sceneID="ttq-RC-gh6">
             <objects>
-                <viewController id="ShW-yg-mB3" sceneMemberID="viewController">
+                <viewController id="ShW-yg-mB3" customClass="ReadingPuzzleVC" customModule="BB2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TRg-Sb-vXM"/>
                         <viewControllerLayoutGuide type="bottom" id="NlW-9U-EgU"/>
@@ -41,8 +42,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9o-oL-9EN">
-                                <frame key="frameInset" minX="156" minY="305" width="63" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reading is an amazing thing to learn how to do. When you can read the world is your oyster." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9o-oL-9EN">
+                                <frame key="frameInset" minX="146" minY="296" width="699" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -54,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CiF-2W-fb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1994" y="-214"/>
+            <point key="canvasLocation" x="2060" y="-599"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wOR-bf-jyA">
@@ -81,7 +82,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4N-Og-hEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1993" y="479"/>
+            <point key="canvasLocation" x="2060" y="102"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jQf-r1-2HG">
+            <objects>
+                <viewController id="8hO-Xn-VBY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3vb-1U-Ki1"/>
+                        <viewControllerLayoutGuide type="bottom" id="lLx-bj-Ont"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xlm-gE-Otm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cool places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFw-6n-M12">
+                                <frame key="frameInset" minX="146" minY="276" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAc-xL-mXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045.5999999999999" y="801.94902548725645"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qwp-cB-ifT">
