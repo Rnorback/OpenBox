@@ -6,8 +6,6 @@
 //  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
 //
 
-import UIKit
-
 class HeartRatePuzzle: Puzzle {
     
     let puzzleId: PuzzleId = .heartRate
@@ -20,7 +18,7 @@ class HeartRatePuzzle: Puzzle {
                 GridPosition(x: 6, y: 9),
                 GridPosition(x: 7, y: 9)
             ],
-            color: UIColor(red: 0.800, green: 0.267, blue: 0.267, alpha: 1.00),
+            color: Colors.heartRate,
             puzzleId: puzzleId
         )
     }

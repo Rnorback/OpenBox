@@ -6,8 +6,6 @@
 //  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
 //
 
-import UIKit
-
 class ReadingPuzzle: Puzzle {
     
     let puzzleId:PuzzleId = .reading
@@ -21,7 +19,7 @@ class ReadingPuzzle: Puzzle {
                 GridPosition(x: 7, y: 12),
                 GridPosition(x: 7, y: 13)
             ],
-            color: UIColor(red: 0.953, green: 0.647, blue: 0.212, alpha: 1.00),
+            color: Colors.reading,
             puzzleId: puzzleId
         )
     }
