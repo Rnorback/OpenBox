@@ -12,5 +12,5 @@ enum PuzzleId: String {
     case reading
     case heartRate
 //    case bluetooth
-//    case coolPlaces
+    case coolPlaces
 }
