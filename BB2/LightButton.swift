@@ -39,12 +39,4 @@ class LightButton: UIButton {
             self?.transform = .identity
         }
     }
-    
-    func activate() {
-        UIView.animate(withDuration: duration, animations: { [weak self] in
-            self?.transform = .identity
-        }, completion: { [weak self] (success) in
-            self?.onClick()
-        })
-    }
 }

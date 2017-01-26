@@ -47,30 +47,32 @@ extension LightGroup {
             )
             light.addTarget(
                 self,
-                action: #selector(lightPressed(button:)),
+                action: #selector(lightPressed),
                 for: [.touchDown, .touchDragInside]
             )
             light.addTarget(
                 self,
-                action: #selector(lightReleased(button:)),
+                action: #selector(lightReleased),
                 for: .touchDragOutside
             )
         }
     }
     
-    @objc fileprivate func lightPressed(button:LightButton) {
+    @objc fileprivate func lightPressed() {
         for light in lights {
             light.shrink()
         }
     }
     
-    @objc fileprivate func lightReleased(button:LightButton) {
+    @objc fileprivate func lightReleased() {
         for light in lights {
             light.returnToNormal()
         }
     }
     
     @objc fileprivate func lightActivated(button:LightButton) {
-        button.activate()
+        for light in lights {
+            light.returnToNormal()
+        }
     }
 }
