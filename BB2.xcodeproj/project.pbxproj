@@ -11,6 +11,7 @@
 		84665E4EFC78946B759F4B66 /* Pods_BB2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1AED244CF280364BB49A /* Pods_BB2UITests.framework */; };
 		847AE1724974BD79C9512CAF /* Pods_BB2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5093326FA270E9AD78D626D1 /* Pods_BB2Tests.framework */; };
 		932AF3B31E39E594007B8D5E /* ReadingPuzzleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF3B21E39E594007B8D5E /* ReadingPuzzleVC.swift */; };
+		9330544D1E3A8C2C00AB7D91 /* AnimationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9330544C1E3A8C2C00AB7D91 /* AnimationError.swift */; };
 		9333034B1E39B8EC00E2C957 /* PuzzleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9333034A1E39B8EC00E2C957 /* PuzzleId.swift */; };
 		9333034D1E39BF6E00E2C957 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9333034C1E39BF6E00E2C957 /* SegueHandlerType.swift */; };
 		934EBB201E3072EB005E44FB /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB1F1E3072EB005E44FB /* Puzzle.swift */; };
@@ -55,6 +56,7 @@
 		7FBC9F34362A65786E4C2403 /* Pods-BB2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BB2Tests/Pods-BB2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1AED244CF280364BB49A /* Pods_BB2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BB2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		932AF3B21E39E594007B8D5E /* ReadingPuzzleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingPuzzleVC.swift; sourceTree = "<group>"; };
+		9330544C1E3A8C2C00AB7D91 /* AnimationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationError.swift; sourceTree = "<group>"; };
 		9333034A1E39B8EC00E2C957 /* PuzzleId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleId.swift; sourceTree = "<group>"; };
 		9333034C1E39BF6E00E2C957 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		934EBB1F1E3072EB005E44FB /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				9385C0A61E318E1E001DF453 /* LightGroup.swift */,
 				934EBB231E3082E0005E44FB /* GridPosition.swift */,
 				9333034C1E39BF6E00E2C957 /* SegueHandlerType.swift */,
+				9330544C1E3A8C2C00AB7D91 /* AnimationError.swift */,
 				9385C0A81E3191F7001DF453 /* Puzzles */,
 				9385C0A91E319210001DF453 /* Constants */,
 				9385C0AA1E319220001DF453 /* Assets/Launch/Plist */,
@@ -529,6 +532,7 @@
 				9333034D1E39BF6E00E2C957 /* SegueHandlerType.swift in Sources */,
 				934EBB2C1E30A3D3005E44FB /* HeartRatePuzzle.swift in Sources */,
 				934EBB261E309A45005E44FB /* ReadingPuzzle.swift in Sources */,
+				9330544D1E3A8C2C00AB7D91 /* AnimationError.swift in Sources */,
 				9385C0A71E318E1E001DF453 /* LightGroup.swift in Sources */,
 				934EBB201E3072EB005E44FB /* Puzzle.swift in Sources */,
 				9386AA411E3045D6007239C8 /* AppDelegate.swift in Sources */,
