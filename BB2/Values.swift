@@ -21,8 +21,8 @@ struct Values {
     static let dotsBuffer:Int = 8
     
     ///Distance between dots
-    static let betweenDots:Int = 40
+    static let betweenDots:Int = 50
     
     ///Size of the lights
-    static var lightWidth:Int = 36
+    static var lightWidth:Int = 43
 }
