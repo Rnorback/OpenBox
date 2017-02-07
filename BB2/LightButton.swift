@@ -22,7 +22,7 @@ class LightButton: UIButton {
         
         self.center = gridPos.center
         self.backgroundColor = color
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = 12
     }
     
     required init?(coder aDecoder: NSCoder) {
