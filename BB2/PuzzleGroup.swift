@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Puzzle {
+protocol PuzzleGroup {
     var lightGroup:LightGroup {get}
     var puzzleId:PuzzleId {get}
 }

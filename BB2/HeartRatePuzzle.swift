@@ -6,7 +6,7 @@
 //  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
 //
 
-class HeartRatePuzzle: Puzzle {
+class HeartRatePuzzle: PuzzleGroup {
     
     let puzzleId: PuzzleId = .heartRate
     private(set) var lightGroup:LightGroup

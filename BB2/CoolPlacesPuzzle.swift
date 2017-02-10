@@ -6,7 +6,7 @@
 //  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
 //
 
-class CoolPlacesPuzzle: Puzzle {
+class CoolPlacesPuzzle: PuzzleGroup {
     
     let puzzleId: PuzzleId = .coolPlaces
     var lightGroup: LightGroup
@@ -15,7 +15,6 @@ class CoolPlacesPuzzle: Puzzle {
         lightGroup = LightGroup(
             positions: [
                 GridPosition(x: 5, y: 10),
-                GridPosition(x: 5, y: 11),
                 GridPosition(x: 6, y: 10),
                 GridPosition(x: 6, y: 11)
             ],

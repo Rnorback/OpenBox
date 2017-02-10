@@ -6,7 +6,7 @@
 //  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
 //
 
-class ReadingPuzzle: Puzzle {
+class ReadingPuzzle: PuzzleGroup {
     
     let puzzleId:PuzzleId = .reading
     private(set) var lightGroup:LightGroup
@@ -16,8 +16,8 @@ class ReadingPuzzle: Puzzle {
             positions: [
                 GridPosition(x: 7, y: 10),
                 GridPosition(x: 7, y: 11),
-                GridPosition(x: 7, y: 12),
-                GridPosition(x: 7, y: 13)
+                GridPosition(x: 8, y: 10),
+                GridPosition(x: 8, y: 11)
             ],
             color: Colors.reading,
             puzzleId: puzzleId
