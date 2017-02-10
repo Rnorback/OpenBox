@@ -10,12 +10,6 @@ import UIKit
 
 class MainMenuVC: UIViewController {
     
-    let puzzles:[Puzzle] = [
-        ReadingPuzzle(),
-        HeartRatePuzzle(),
-        CoolPlacesPuzzle()
-    ]
-    
     var dotsAcross:Int {
         return Values.dotsAcross
     }
@@ -80,9 +74,30 @@ class MainMenuVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let gridPos = GridPosition(x: 7, y: 7)
+//        let lightButton = LightButton(gridPos: gridPos, color: UIColor.black)
+//        lightButton.center = CGPoint(x: 100, y: 100)
+//        view.addSubview(lightButton)
+//        lightButton.addTarget(self, action: #selector(light(lightButton:)), for: .touchUpInside)
+//        
+        
         drawScrollView()
         placeDots()
         placeLightButtons()
+    }
+    
+    func light(lightButton:LightButton) {
+        if lightButton.lightState == .lit {
+            lightButton.lightState = .unlit
+        } else {
+            lightButton.lightState = .lit
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let waitVC = segue.destination as? WaitPuzzleVC {
+            waitVC.waitPuzzle = Puzzles.wait
+        }
     }
 }
 
@@ -90,10 +105,10 @@ class MainMenuVC: UIViewController {
 extension MainMenuVC {
 
     func placeLightButtons() {
-        for puzzle in puzzles {
+        for puzzle in Puzzles.all {
             for light in puzzle.lightGroup.lights {
                 light.onClick = { [weak self] in
-                    let identifier = SegueIdentifier(puzzleId: light.puzzleId)
+                    let identifier = SegueIdentifier(puzzleId: puzzle.puzzleId)
                     self?.performSegue(withIdentifier: identifier, sender: self)
                 }
                 scrollView.addSubview(light)
@@ -114,12 +129,8 @@ extension MainMenuVC {
     func placeDots() {
         for x in 0...totalDotsAcross {
             for y in 0...totalDotsDown {
-                let dot = Dot(position:
-                    CGPoint(
-                        x: x * betweenDots + betweenDots/2,
-                        y: y * betweenDots + betweenDots/2
-                    )
-                )
+                let position = CGPoint(x: x * betweenDots + betweenDots/2, y: y * betweenDots + betweenDots/2)
+                let dot = Dot(position: position, color: Colors.bgDot)
                 scrollView.layer.addSublayer(dot)
             }
         }
@@ -132,6 +143,7 @@ extension MainMenuVC: SegueHandlerType {
         case showReading
         case showHeartRate
         case showCoolPlaces
+        case showWait
         
         init(puzzleId:PuzzleId) {
             switch puzzleId {
@@ -141,6 +153,8 @@ extension MainMenuVC: SegueHandlerType {
                 self = .showHeartRate
             case .coolPlaces:
                 self = .showCoolPlaces
+            case .wait:
+                self = .showWait
             }
         }
     }

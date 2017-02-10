@@ -28,8 +28,7 @@ class LightGroup {
         for pos in positions {
             let light = LightButton(
                 gridPos: pos,
-                color: color,
-                puzzleId: puzzleId
+                color: color
             )
             lights.append(light)
         }
@@ -54,7 +53,7 @@ extension LightGroup {
             light.addTarget(
                 self,
                 action: #selector(lightReleased),
-                for: .touchDragOutside
+                for: [.touchDragOutside, .touchCancel]
             )
         }
     }
