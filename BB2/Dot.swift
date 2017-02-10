@@ -11,9 +11,8 @@ import UIKit
 class Dot: CAShapeLayer {
     
     let radius:CGFloat = 3
-    let color:UIColor = UIColor.lightGray
     
-    init(position:CGPoint) {
+    init(position:CGPoint, color:UIColor) {
         super.init()
         
         let circlePath = UIBezierPath(
