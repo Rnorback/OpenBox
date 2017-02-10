@@ -11,22 +11,64 @@ import PromiseKit
 
 class LightButton: UIButton {
     
-    private(set) var puzzleId:PuzzleId
+    enum LightState {
+        case lit
+        case unlit
+    }
+    
     var onClick:(()->Void) = {}
     let duration:TimeInterval = 0.2
+    private(set) var color:UIColor
+    var gridPos:GridPosition
     
-    init(gridPos:GridPosition, color:UIColor, puzzleId:PuzzleId) {
-        self.puzzleId = puzzleId
+    var lightState:LightState {
+        didSet {
+            updateIllumination()
+        }
+    }
+    
+    init(gridPos:GridPosition, color:UIColor, lightState:LightState = .unlit) {
+        self.gridPos = gridPos
+        self.lightState = lightState
+        self.color = color
         let width = CGFloat(Values.lightWidth)
         super.init(frame: CGRect(x: 0, y: 0, width: width, height: width))
         
         self.center = gridPos.center
-        self.backgroundColor = color
         self.layer.cornerRadius = 12
+        self.layer.borderColor = color.cgColor
+        self.layer.borderWidth = 2
+    
+        let dotCenter = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
+        let centerDot = Dot(position: dotCenter, color: color)
+        self.layer.addSublayer(centerDot)
+        
+        updateIllumination()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    fileprivate func light() {
+        UIView.animate(withDuration: duration) { [weak self] in
+            self?.backgroundColor = self?.color
+        }
+    }
+    
+    fileprivate func unlight() {
+        UIView.animate(withDuration: duration) { [weak self] in
+            self?.backgroundColor = UIColor.clear
+        }
+    }
+    
+    fileprivate func updateIllumination() {
+        switch lightState {
+        case .lit:
+            self.light()
+        case .unlit:
+            self.unlight()
+        }
     }
     
     func shrink() {
@@ -49,5 +91,12 @@ class LightButton: UIButton {
                 success ? fulfill() : reject(AnimationError.failedToComplete)
             })
         }
+    }
+}
+
+extension LightButton: NSCopying {
+    func copy(with zone: NSZone? = nil) -> Any {
+        let copy = LightButton(gridPos: gridPos, color: color, lightState: lightState)
+        return copy
     }
 }
