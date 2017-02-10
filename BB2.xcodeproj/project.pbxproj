@@ -15,13 +15,16 @@
 		9330544D1E3A8C2C00AB7D91 /* AnimationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9330544C1E3A8C2C00AB7D91 /* AnimationError.swift */; };
 		9333034B1E39B8EC00E2C957 /* PuzzleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9333034A1E39B8EC00E2C957 /* PuzzleId.swift */; };
 		9333034D1E39BF6E00E2C957 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9333034C1E39BF6E00E2C957 /* SegueHandlerType.swift */; };
-		934EBB201E3072EB005E44FB /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB1F1E3072EB005E44FB /* Puzzle.swift */; };
+		934EBB201E3072EB005E44FB /* PuzzleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB1F1E3072EB005E44FB /* PuzzleGroup.swift */; };
 		934EBB221E3081AD005E44FB /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB211E3081AD005E44FB /* LightButton.swift */; };
 		934EBB241E3082E0005E44FB /* GridPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB231E3082E0005E44FB /* GridPosition.swift */; };
 		934EBB261E309A45005E44FB /* ReadingPuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB251E309A45005E44FB /* ReadingPuzzle.swift */; };
 		934EBB281E309B5C005E44FB /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB271E309B5C005E44FB /* Values.swift */; };
 		934EBB2A1E309DE2005E44FB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB291E309DE2005E44FB /* Colors.swift */; };
 		934EBB2C1E30A3D3005E44FB /* HeartRatePuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB2B1E30A3D3005E44FB /* HeartRatePuzzle.swift */; };
+		936DD7211E4A799900FE83FC /* WaitPuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DD7201E4A799900FE83FC /* WaitPuzzle.swift */; };
+		936DD7231E4A8AB100FE83FC /* WaitPuzzleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DD7221E4A8AB100FE83FC /* WaitPuzzleVC.swift */; };
+		936DD7251E4A910600FE83FC /* Puzzles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DD7241E4A910600FE83FC /* Puzzles.swift */; };
 		9385C0A71E318E1E001DF453 /* LightGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385C0A61E318E1E001DF453 /* LightGroup.swift */; };
 		9386AA411E3045D6007239C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386AA401E3045D6007239C8 /* AppDelegate.swift */; };
 		9386AA431E3045D6007239C8 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386AA421E3045D6007239C8 /* MainMenuVC.swift */; };
@@ -61,13 +64,16 @@
 		9330544C1E3A8C2C00AB7D91 /* AnimationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationError.swift; sourceTree = "<group>"; };
 		9333034A1E39B8EC00E2C957 /* PuzzleId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleId.swift; sourceTree = "<group>"; };
 		9333034C1E39BF6E00E2C957 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
-		934EBB1F1E3072EB005E44FB /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
+		934EBB1F1E3072EB005E44FB /* PuzzleGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleGroup.swift; sourceTree = "<group>"; };
 		934EBB211E3081AD005E44FB /* LightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
 		934EBB231E3082E0005E44FB /* GridPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridPosition.swift; sourceTree = "<group>"; };
 		934EBB251E309A45005E44FB /* ReadingPuzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingPuzzle.swift; sourceTree = "<group>"; };
 		934EBB271E309B5C005E44FB /* Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
 		934EBB291E309DE2005E44FB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		934EBB2B1E30A3D3005E44FB /* HeartRatePuzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRatePuzzle.swift; sourceTree = "<group>"; };
+		936DD7201E4A799900FE83FC /* WaitPuzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitPuzzle.swift; sourceTree = "<group>"; };
+		936DD7221E4A8AB100FE83FC /* WaitPuzzleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitPuzzleVC.swift; sourceTree = "<group>"; };
+		936DD7241E4A910600FE83FC /* Puzzles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzles.swift; sourceTree = "<group>"; };
 		9385C0A61E318E1E001DF453 /* LightGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightGroup.swift; sourceTree = "<group>"; };
 		9386AA3D1E3045D6007239C8 /* BB2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BB2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9386AA401E3045D6007239C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 			children = (
 				9386AA421E3045D6007239C8 /* MainMenuVC.swift */,
 				932AF3B21E39E594007B8D5E /* ReadingPuzzleVC.swift */,
+				936DD7221E4A8AB100FE83FC /* WaitPuzzleVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -132,7 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				9333034A1E39B8EC00E2C957 /* PuzzleId.swift */,
-				934EBB1F1E3072EB005E44FB /* Puzzle.swift */,
+				934EBB1F1E3072EB005E44FB /* PuzzleGroup.swift */,
+				936DD7201E4A799900FE83FC /* WaitPuzzle.swift */,
 				934EBB251E309A45005E44FB /* ReadingPuzzle.swift */,
 				934EBB2B1E30A3D3005E44FB /* HeartRatePuzzle.swift */,
 				939617CD1E39E8C800D8D65A /* CoolPlacesPuzzle.swift */,
@@ -145,6 +153,7 @@
 			children = (
 				934EBB271E309B5C005E44FB /* Values.swift */,
 				934EBB291E309DE2005E44FB /* Colors.swift */,
+				936DD7241E4A910600FE83FC /* Puzzles.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -189,11 +198,11 @@
 				932AF3B41E39E59E007B8D5E /* ViewControllers */,
 				9386AA6E1E304A1B007239C8 /* Dot.swift */,
 				934EBB211E3081AD005E44FB /* LightButton.swift */,
-				930928481E3AC9D4007DEA67 /* String+.swift */,
 				9385C0A61E318E1E001DF453 /* LightGroup.swift */,
 				934EBB231E3082E0005E44FB /* GridPosition.swift */,
 				9333034C1E39BF6E00E2C957 /* SegueHandlerType.swift */,
 				9330544C1E3A8C2C00AB7D91 /* AnimationError.swift */,
+				930928481E3AC9D4007DEA67 /* String+.swift */,
 				9385C0A81E3191F7001DF453 /* Puzzles */,
 				9385C0A91E319210001DF453 /* Constants */,
 				9385C0AA1E319220001DF453 /* Assets/Launch/Plist */,
@@ -527,19 +536,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9386AA431E3045D6007239C8 /* MainMenuVC.swift in Sources */,
+				936DD7251E4A910600FE83FC /* Puzzles.swift in Sources */,
 				932AF3B31E39E594007B8D5E /* ReadingPuzzleVC.swift in Sources */,
 				934EBB2A1E309DE2005E44FB /* Colors.swift in Sources */,
 				934EBB221E3081AD005E44FB /* LightButton.swift in Sources */,
 				934EBB241E3082E0005E44FB /* GridPosition.swift in Sources */,
 				9333034B1E39B8EC00E2C957 /* PuzzleId.swift in Sources */,
+				936DD7231E4A8AB100FE83FC /* WaitPuzzleVC.swift in Sources */,
 				9333034D1E39BF6E00E2C957 /* SegueHandlerType.swift in Sources */,
 				934EBB2C1E30A3D3005E44FB /* HeartRatePuzzle.swift in Sources */,
 				934EBB261E309A45005E44FB /* ReadingPuzzle.swift in Sources */,
 				9330544D1E3A8C2C00AB7D91 /* AnimationError.swift in Sources */,
 				9385C0A71E318E1E001DF453 /* LightGroup.swift in Sources */,
-				934EBB201E3072EB005E44FB /* Puzzle.swift in Sources */,
+				934EBB201E3072EB005E44FB /* PuzzleGroup.swift in Sources */,
 				9386AA411E3045D6007239C8 /* AppDelegate.swift in Sources */,
 				9386AA6F1E304A1B007239C8 /* Dot.swift in Sources */,
+				936DD7211E4A799900FE83FC /* WaitPuzzle.swift in Sources */,
 				930928491E3AC9D4007DEA67 /* String+.swift in Sources */,
 				939617CE1E39E8C800D8D65A /* CoolPlacesPuzzle.swift in Sources */,
 				934EBB281E309B5C005E44FB /* Values.swift in Sources */,
