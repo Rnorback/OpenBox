@@ -70,6 +70,8 @@ class MainMenuVC: UIViewController {
     }
     
     var scrollView:UIScrollView!
+    var lightGroups:[LightGroup] = []
+    var mainMenuVM:MainMenuVM = MainMenuVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,36 +85,39 @@ class MainMenuVC: UIViewController {
         
         drawScrollView()
         placeDots()
-        placeLightButtons()
+        createLightGroupsAndPlaceLights()
     }
     
     func light(lightButton:LightButton) {
-        if lightButton.lightState == .lit {
-            lightButton.lightState = .unlit
-        } else {
-            lightButton.lightState = .lit
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let waitVC = segue.destination as? WaitPuzzleVC {
-            waitVC.waitPuzzle = Puzzles.wait
-        }
+        lightButton.isLit = lightButton.isLit ? true : false
     }
 }
 
 //MARK: - View Loading Helpers
 extension MainMenuVC {
 
-    func placeLightButtons() {
-        for puzzle in Puzzles.all {
-            for light in puzzle.lightGroup.lights {
+    func createLightGroupsAndPlaceLights() {
+        
+        // for each menu item
+        for menuItem in mainMenuVM.menuItems {
+            //create a light for each lightVM and add it to the screen
+            var lights:[LightButton] = []
+            for lightVM in menuItem.lightData {
+                
+                let light = LightButton(lightVM: lightVM)
                 light.onClick = { [weak self] in
-                    let identifier = SegueIdentifier(puzzleId: puzzle.puzzleId)
+                    let identifier = SegueIdentifier(segueId: menuItem.segueId)
                     self?.performSegue(withIdentifier: identifier, sender: self)
                 }
+                
                 scrollView.addSubview(light)
+                lights.append(light)
+                
             }
+            
+            //create a light group add it to the lightGroups array
+            let lightGroup:LightGroup = LightGroup(lightButtons: lights)
+            lightGroups.append(lightGroup)
         }
     }
     
@@ -145,8 +150,8 @@ extension MainMenuVC: SegueHandlerType {
         case showCoolPlaces
         case showWait
         
-        init(puzzleId:PuzzleId) {
-            switch puzzleId {
+        init(segueId:SegueId) {
+            switch segueId {
             case .reading:
                 self = .showReading
             case .heartRate:

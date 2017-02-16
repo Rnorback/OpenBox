@@ -24,7 +24,6 @@ struct GridPosition {
     
     ///Center based on grid position
     var center:CGPoint {
-        
         let buffer = Values.dotsBuffer * Values.betweenDots + Values.betweenDots/2
         let xPos = x * Values.betweenDots + buffer
         let yPos = y * Values.betweenDots + buffer

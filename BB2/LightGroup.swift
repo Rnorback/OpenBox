@@ -12,26 +12,10 @@ import PromiseKit
 class LightGroup {
     
     private(set) var lights:[LightButton] = []
-    private(set) var color:UIColor
-    private(set) var positions:[GridPosition]
-    private(set) var puzzleId:PuzzleId
     
-    init(positions:[GridPosition], color:UIColor, puzzleId:PuzzleId) {
-        self.positions = positions
-        self.color = color
-        self.puzzleId = puzzleId
-        setupLights()
+    init(lightButtons:[LightButton]) {
+        self.lights = lightButtons
         addTargets()
-    }
-    
-    func setupLights() {
-        for pos in positions {
-            let light = LightButton(
-                gridPos: pos,
-                color: color
-            )
-            lights.append(light)
-        }
     }
 }
 
@@ -53,7 +37,7 @@ extension LightGroup {
             light.addTarget(
                 self,
                 action: #selector(lightReleased),
-                for: [.touchDragOutside, .touchCancel]
+                for: [.touchDragOutside]
             )
         }
     }

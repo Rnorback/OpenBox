@@ -11,37 +11,47 @@ import PromiseKit
 
 class LightButton: UIButton {
     
-    enum LightState {
-        case lit
-        case unlit
-    }
-    
     var onClick:(()->Void) = {}
-    let duration:TimeInterval = 0.2
+    let animationDuration:TimeInterval = 0.2
     private(set) var color:UIColor
-    var gridPos:GridPosition
+    private(set) var puzzleId:PuzzleId
     
-    var lightState:LightState {
+    var isLit:Bool {
         didSet {
             updateIllumination()
         }
     }
     
-    init(gridPos:GridPosition, color:UIColor, lightState:LightState = .unlit) {
-        self.gridPos = gridPos
-        self.lightState = lightState
+     convenience init(lightVM:LightVM) {
+        self.init(center:lightVM.center, color: lightVM.color, puzzleId: lightVM.puzzleId)
+    }
+    
+    init(center:CGPoint, color:UIColor, puzzleId:PuzzleId) {
+        self.puzzleId = puzzleId
         self.color = color
+        self.isLit = UserDefaults.standard.bool(forKey: puzzleId.rawValue)
+        
         let width = CGFloat(Values.lightWidth)
         super.init(frame: CGRect(x: 0, y: 0, width: width, height: width))
         
-        self.center = gridPos.center
+        //light
+        self.center = center
         self.layer.cornerRadius = 12
         self.layer.borderColor = color.cgColor
         self.layer.borderWidth = 2
     
+        //center dot
         let dotCenter = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
         let centerDot = Dot(position: dotCenter, color: color)
         self.layer.addSublayer(centerDot)
+        
+        //add notification
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(LightButton.handle(withNotification:)),
+            name: Notification.Name(puzzleId.rawValue),
+            object: nil
+        )
         
         updateIllumination()
     }
@@ -50,53 +60,62 @@ class LightButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        print("LightButton deinit")
+        NotificationCenter.default.removeObserver(
+            self,
+            name: Notification.Name(puzzleId.rawValue),
+            object: nil
+        )
+    }
+    
+    @objc func handle(withNotification notification:Notification) {
+        isLit = true
+    }
+}
+
+//Mark: - Animations
+extension LightButton {
+    
+    fileprivate func updateIllumination() {
+        if isLit {
+            light()
+        } else {
+            unlight()
+        }
+    }
+    
     fileprivate func light() {
-        UIView.animate(withDuration: duration) { [weak self] in
+        UIView.animate(withDuration: animationDuration) { [weak self] in
             self?.backgroundColor = self?.color
         }
     }
     
     fileprivate func unlight() {
-        UIView.animate(withDuration: duration) { [weak self] in
+        UIView.animate(withDuration: animationDuration) { [weak self] in
             self?.backgroundColor = UIColor.clear
         }
     }
     
-    fileprivate func updateIllumination() {
-        switch lightState {
-        case .lit:
-            self.light()
-        case .unlit:
-            self.unlight()
-        }
-    }
-    
     func shrink() {
-        UIView.animate(withDuration: duration) { [weak self] in
+        UIView.animate(withDuration: animationDuration) { [weak self] in
             self?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         }
     }
     
     func toNormalSize() {
-        UIView.animate(withDuration: duration) { [weak self] in
+        UIView.animate(withDuration: animationDuration) { [weak self] in
             self?.transform = .identity
         }
     }
     
     func toNormalSizePromise() -> Promise<Void> {
         return Promise { fulfill, reject in
-            UIView.animate(withDuration: duration, animations: { [weak self] in
+            UIView.animate(withDuration: animationDuration, animations: { [weak self] in
                 self?.transform = .identity
             }, completion: { (success) in
                 success ? fulfill() : reject(AnimationError.failedToComplete)
             })
         }
-    }
-}
-
-extension LightButton: NSCopying {
-    func copy(with zone: NSZone? = nil) -> Any {
-        let copy = LightButton(gridPos: gridPos, color: color, lightState: lightState)
-        return copy
     }
 }

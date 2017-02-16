@@ -9,8 +9,12 @@
 import Foundation
 
 enum PuzzleId: String {
-    case reading
-    case heartRate
-    case coolPlaces
-    //    case bluetooth
+    case waitOneMinute
+    case waitOneHour
+    case waitOneDay
+    
+    case readFirstStanza
+    case readForward
+    case readBackward
+    case readRefrainBackward
 }
