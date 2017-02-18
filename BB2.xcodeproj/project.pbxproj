@@ -46,6 +46,9 @@
 		93E20F821E58BF110017F55F /* ReadForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F811E58BF110017F55F /* ReadForward.swift */; };
 		93E20F841E58BF290017F55F /* ReadBackward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F831E58BF290017F55F /* ReadBackward.swift */; };
 		93E20F861E58BF430017F55F /* ReadLastStanzaBackward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F851E58BF430017F55F /* ReadLastStanzaBackward.swift */; };
+		93E20F8A1E58E7040017F55F /* LowPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F891E58E7040017F55F /* LowPower.swift */; };
+		93E20F8C1E58E7190017F55F /* LowPowerLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F8B1E58E7190017F55F /* LowPowerLevelVC.swift */; };
+		93E20F8E1E58E7270017F55F /* LowPowerLevelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F8D1E58E7270017F55F /* LowPowerLevelVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,9 @@
 		93E20F811E58BF110017F55F /* ReadForward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadForward.swift; sourceTree = "<group>"; };
 		93E20F831E58BF290017F55F /* ReadBackward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadBackward.swift; sourceTree = "<group>"; };
 		93E20F851E58BF430017F55F /* ReadLastStanzaBackward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadLastStanzaBackward.swift; sourceTree = "<group>"; };
+		93E20F891E58E7040017F55F /* LowPower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowPower.swift; sourceTree = "<group>"; };
+		93E20F8B1E58E7190017F55F /* LowPowerLevelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowPowerLevelVC.swift; sourceTree = "<group>"; };
+		93E20F8D1E58E7270017F55F /* LowPowerLevelVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowPowerLevelVM.swift; sourceTree = "<group>"; };
 		9490BB64993BE2BA19D39CC4 /* Pods_BB2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BB2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B255FC23AD4670B8B9D74D2D /* Pods-BB2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2.release.xcconfig"; path = "Pods/Target Support Files/Pods-BB2/Pods-BB2.release.xcconfig"; sourceTree = "<group>"; };
 		B57B65A926BAC55AF9154ED5 /* Pods-BB2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BB2UITests/Pods-BB2UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +156,6 @@
 		932AF3B41E39E59E007B8D5E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9391668D1E54F20B00F93C87 /* LightVM.swift */,
 				939166941E54F43900F93C87 /* MainMenu */,
 				939166931E54F42F00F93C87 /* Levels */,
 			);
@@ -162,6 +167,7 @@
 			children = (
 				934EBB231E3082E0005E44FB /* GridPosition.swift */,
 				9386AA6E1E304A1B007239C8 /* Dot.swift */,
+				9391668D1E54F20B00F93C87 /* LightVM.swift */,
 				934EBB211E3081AD005E44FB /* LightButton.swift */,
 				9385C0A61E318E1E001DF453 /* LightGroup.swift */,
 			);
@@ -189,8 +195,9 @@
 			children = (
 				9333034A1E39B8EC00E2C957 /* PuzzleId.swift */,
 				9361F1C21E4E936D00F9C59C /* Puzzle.swift */,
-				93E20F881E58BF760017F55F /* Fable */,
 				93E20F871E58BF660017F55F /* Wait */,
+				93E20F921E58F38B0017F55F /* LowPower */,
+				93E20F881E58BF760017F55F /* Fable */,
 			);
 			name = Puzzles;
 			sourceTree = "<group>";
@@ -282,11 +289,10 @@
 			isa = PBXGroup;
 			children = (
 				939166911E54F30600F93C87 /* LevelVM.swift */,
-				936DD7221E4A8AB100FE83FC /* WaitLevelVC.swift */,
-				939166971E54FF1600F93C87 /* WaitLevelVM.swift */,
 				932AF3B21E39E594007B8D5E /* ReadingPuzzleVC.swift */,
-				93E20F7B1E58BB5C0017F55F /* FableLeveVC.swift */,
-				93E20F7D1E58BB810017F55F /* FableLevelVM.swift */,
+				93E20F8F1E58F3740017F55F /* Wait */,
+				93E20F901E58F3790017F55F /* LowPower */,
+				93E20F911E58F3810017F55F /* Fable */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -323,6 +329,41 @@
 				93E20F851E58BF430017F55F /* ReadLastStanzaBackward.swift */,
 			);
 			name = Fable;
+			sourceTree = "<group>";
+		};
+		93E20F8F1E58F3740017F55F /* Wait */ = {
+			isa = PBXGroup;
+			children = (
+				936DD7221E4A8AB100FE83FC /* WaitLevelVC.swift */,
+				939166971E54FF1600F93C87 /* WaitLevelVM.swift */,
+			);
+			name = Wait;
+			sourceTree = "<group>";
+		};
+		93E20F901E58F3790017F55F /* LowPower */ = {
+			isa = PBXGroup;
+			children = (
+				93E20F8B1E58E7190017F55F /* LowPowerLevelVC.swift */,
+				93E20F8D1E58E7270017F55F /* LowPowerLevelVM.swift */,
+			);
+			name = LowPower;
+			sourceTree = "<group>";
+		};
+		93E20F911E58F3810017F55F /* Fable */ = {
+			isa = PBXGroup;
+			children = (
+				93E20F7B1E58BB5C0017F55F /* FableLeveVC.swift */,
+				93E20F7D1E58BB810017F55F /* FableLevelVM.swift */,
+			);
+			name = Fable;
+			sourceTree = "<group>";
+		};
+		93E20F921E58F38B0017F55F /* LowPower */ = {
+			isa = PBXGroup;
+			children = (
+				93E20F891E58E7040017F55F /* LowPower.swift */,
+			);
+			name = LowPower;
 			sourceTree = "<group>";
 		};
 		AA2E2771859727FAC28D623B /* Pods */ = {
@@ -637,6 +678,8 @@
 				9361F1C31E4E936D00F9C59C /* Puzzle.swift in Sources */,
 				932AF3B31E39E594007B8D5E /* ReadingPuzzleVC.swift in Sources */,
 				93E20F7E1E58BB810017F55F /* FableLevelVM.swift in Sources */,
+				93E20F8A1E58E7040017F55F /* LowPower.swift in Sources */,
+				93E20F8E1E58E7270017F55F /* LowPowerLevelVM.swift in Sources */,
 				934EBB2A1E309DE2005E44FB /* Colors.swift in Sources */,
 				93E20F861E58BF430017F55F /* ReadLastStanzaBackward.swift in Sources */,
 				93E20F7C1E58BB5C0017F55F /* FableLeveVC.swift in Sources */,
@@ -646,6 +689,7 @@
 				93E20F801E58BE900017F55F /* ReadFirstStanza.swift in Sources */,
 				934EBB241E3082E0005E44FB /* GridPosition.swift in Sources */,
 				9333034B1E39B8EC00E2C957 /* PuzzleId.swift in Sources */,
+				93E20F8C1E58E7190017F55F /* LowPowerLevelVC.swift in Sources */,
 				9361F1C91E4E96E800F9C59C /* WaitOneDay.swift in Sources */,
 				93E20F841E58BF290017F55F /* ReadBackward.swift in Sources */,
 				936DD7231E4A8AB100FE83FC /* WaitLevelVC.swift in Sources */,
