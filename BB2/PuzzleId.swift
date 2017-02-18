@@ -9,6 +9,8 @@
 import Foundation
 
 enum PuzzleId: String {
+    
+    case waitOneSecond
     case waitOneMinute
     case waitOneHour
     case waitOneDay
@@ -16,5 +18,5 @@ enum PuzzleId: String {
     case readFirstStanza
     case readForward
     case readBackward
-    case readRefrainBackward
+    case readLastStanzaBackward
 }
