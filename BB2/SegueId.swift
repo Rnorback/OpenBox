@@ -9,9 +9,10 @@
 import Foundation
 
 enum SegueId: String {
-    case reading
+    case fable
     case heartRate
     case coolPlaces
     case wait
+    case lowPower
     //    case bluetooth
 }

@@ -14,7 +14,6 @@ class WaitLevelVC: UIViewController {
     var waitLevelVM:WaitLevelVM = WaitLevelVM()
     var timerView:UIView = UIView()
     var timer:Timer = Timer()
-    var lights:[LightButton] = []
     
     var numLights:Int {
         return waitLevelVM.puzzles.count
@@ -25,9 +24,7 @@ class WaitLevelVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Colors.bg
-        
-        navigationController?.navigationBar.isHidden = true
+        view.backgroundColor = Colors.Menu.bg
         
         NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
@@ -61,7 +58,6 @@ class WaitLevelVC: UIViewController {
                 y: buttonHeight
             )
             view.addSubview(light)
-            lights.append(light)
         }
     }
 }

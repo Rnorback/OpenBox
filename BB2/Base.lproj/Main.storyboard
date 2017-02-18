@@ -25,10 +25,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="ezA-MR-VEN"/>
                     <connections>
-                        <segue destination="ShW-yg-mB3" kind="show" identifier="showReading" id="e26-iP-GEr"/>
+                        <segue destination="ShW-yg-mB3" kind="show" identifier="showFable" id="e26-iP-GEr"/>
                         <segue destination="Lfz-vG-ABa" kind="show" identifier="showHeartRate" id="mLq-1N-DuN"/>
                         <segue destination="8hO-Xn-VBY" kind="show" identifier="showCoolPlaces" id="dBJ-YS-gMf"/>
                         <segue destination="Zul-77-GGB" kind="show" identifier="showWait" id="8gg-jt-REs"/>
+                        <segue destination="u0t-43-8oh" kind="show" identifier="showLowPower" id="Fph-kk-QCu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -117,6 +118,24 @@
             </objects>
             <point key="canvasLocation" x="2046" y="116"/>
         </scene>
+        <!--Low Power LevelVC-->
+        <scene sceneID="wQS-rx-bns">
+            <objects>
+                <viewController id="u0t-43-8oh" customClass="LowPowerLevelVC" customModule="BB2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fg8-Md-2Zg"/>
+                        <viewControllerLayoutGuide type="bottom" id="r2W-U7-DRG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i6i-7F-MoZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5e-dd-OLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2879" y="131"/>
+        </scene>
         <!--Wait LevelVC-->
         <scene sceneID="mWs-yS-tjy">
             <objects>
@@ -168,7 +187,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dVM-lu-ufE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Cg-Ov-Tji">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

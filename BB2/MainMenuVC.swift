@@ -81,7 +81,7 @@ class MainMenuVC: UIViewController {
 //        lightButton.center = CGPoint(x: 100, y: 100)
 //        view.addSubview(lightButton)
 //        lightButton.addTarget(self, action: #selector(light(lightButton:)), for: .touchUpInside)
-//        
+        navigationController?.navigationBar.isHidden = true
         
         drawScrollView()
         placeDots()
@@ -135,7 +135,7 @@ extension MainMenuVC {
         for x in 0...totalDotsAcross {
             for y in 0...totalDotsDown {
                 let position = CGPoint(x: x * betweenDots + betweenDots/2, y: y * betweenDots + betweenDots/2)
-                let dot = Dot(position: position, color: Colors.bgDot)
+                let dot = Dot(position: position, color: Colors.Menu.bgDot)
                 scrollView.layer.addSublayer(dot)
             }
         }
@@ -145,21 +145,24 @@ extension MainMenuVC {
 extension MainMenuVC: SegueHandlerType {
     
     enum SegueIdentifier : String {
-        case showReading
+        case showFable
         case showHeartRate
         case showCoolPlaces
         case showWait
+        case showLowPower
         
         init(segueId:SegueId) {
             switch segueId {
-            case .reading:
-                self = .showReading
+            case .fable:
+                self = .showFable
             case .heartRate:
                 self = .showHeartRate
             case .coolPlaces:
                 self = .showCoolPlaces
             case .wait:
                 self = .showWait
+            case .lowPower:
+                self = .showLowPower
             }
         }
     }

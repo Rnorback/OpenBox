@@ -14,7 +14,7 @@ class ReadBackward: Puzzle {
         return UserDefaults.standard.bool(forKey: puzzleId.rawValue)
     }
     
-    func checkForSuccess(value secondsPassed:Int) {
+    func checkForSuccess(value secondsPassed:Int?) {
         if secondsPassed == 60 {
             NotificationCenter.default.post(
                 name: Notification.Name(puzzleId.rawValue),
