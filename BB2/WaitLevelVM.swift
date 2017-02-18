@@ -9,32 +9,28 @@
 import Foundation
 
 class WaitLevelVM: LevelVM {
+    
     var lightData:[LightVM] = []
-    var puzzles:[Puzzle] = [WaitOneDay(), WaitOneHour(), WaitOneMinute()]
+    var puzzles:[Puzzle] = [
+        WaitOneDay(),
+        WaitOneHour(),
+        WaitOneMinute(),
+        WaitOneSecond()
+    ]
     
     init() {
         addLevelLights()
     }
     
-    func addLevelLights() {
-        let oneMinute = LightVM(
-            color: Colors.Wait.light,
-            center: GridPosition(x: 0, y: 0).center,
-            puzzleId: .waitOneMinute
-        )
-        
-        let oneHour = LightVM(
-            color: Colors.Wait.light,
-            center: GridPosition(x: 0, y: 0).center,
-            puzzleId: .waitOneHour
-        )
-        
-        let oneDay = LightVM(
-            color: Colors.Wait.light,
-            center: GridPosition(x: 0, y: 0).center,
-            puzzleId: .waitOneDay
-        )
-        
-        lightData.append(contentsOf: [oneDay, oneHour, oneMinute])
+    fileprivate func addLevelLights() {
+        for puzzle in puzzles {
+            let lightVM = LightVM(
+                color: Colors.Wait.light,
+                center: GridPosition(x: 0, y: 0).center,
+                puzzleId: puzzle.puzzleId
+            )
+            
+            lightData.append(lightVM)
+        }
     }
 }

@@ -15,7 +15,7 @@ class WaitOneDay: Puzzle {
     }
     
     func checkForSuccess(value secondsPassed:Int) {
-        if secondsPassed == 60 {
+        if secondsPassed == 60 * 60 * 24 + 60 {
             NotificationCenter.default.post(
                 name: Notification.Name(puzzleId.rawValue),
                 object: nil

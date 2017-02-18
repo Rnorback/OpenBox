@@ -15,7 +15,7 @@ class WaitOneMinute: Puzzle {
     }
     
     func checkForSuccess(value secondsPassed:Int) {
-        if secondsPassed == 1 {
+        if secondsPassed == 60 {
             NotificationCenter.default.post(
                 name: Notification.Name(puzzleId.rawValue),
                 object: nil

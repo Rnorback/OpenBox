@@ -17,27 +17,33 @@ class MainMenuVM {
     }
     
     func addWaitMenuItem() {
-        let oneMinute = LightVM(
+        let oneSecond = LightVM(
             color: Colors.Wait.light,
             center: GridPosition(x: 5, y: 13).center,
+            puzzleId: .waitOneSecond
+        )
+        
+        let oneMinute = LightVM(
+            color: Colors.Wait.light,
+            center: GridPosition(x: 5, y: 12).center,
             puzzleId: .waitOneMinute
         )
         
         let oneHour = LightVM(
             color: Colors.Wait.light,
-            center: GridPosition(x: 5, y: 12).center,
+            center: GridPosition(x: 5, y: 11).center,
             puzzleId: .waitOneHour
         )
         
         let oneDay = LightVM(
             color: Colors.Wait.light,
-            center: GridPosition(x: 5, y: 11).center,
+            center: GridPosition(x: 5, y: 10).center,
             puzzleId: .waitOneDay
         )
         
         let waitMenuItem = MenuItem(
             segueId: .wait,
-            lightData: [oneMinute, oneHour, oneDay]
+            lightData: [oneSecond, oneMinute, oneHour, oneDay]
         )
         
         menuItems.append(waitMenuItem)
@@ -66,7 +72,7 @@ class MainMenuVM {
         let readRefrainBackward = LightVM(
             color: Colors.Reading.light,
             center: GridPosition(x: 7, y: 11).center,
-            puzzleId: .readRefrainBackward
+            puzzleId: .readLastStanzaBackward
         )
         
         let readingMenuItem = MenuItem(

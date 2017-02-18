@@ -39,6 +39,13 @@
 		9391668E1E54F20B00F93C87 /* LightVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9391668D1E54F20B00F93C87 /* LightVM.swift */; };
 		939166921E54F30600F93C87 /* LevelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939166911E54F30600F93C87 /* LevelVM.swift */; };
 		939166981E54FF1600F93C87 /* WaitLevelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939166971E54FF1600F93C87 /* WaitLevelVM.swift */; };
+		93E20F7A1E58B60C0017F55F /* WaitOneSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F791E58B60C0017F55F /* WaitOneSecond.swift */; };
+		93E20F7C1E58BB5C0017F55F /* FableLeveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F7B1E58BB5C0017F55F /* FableLeveVC.swift */; };
+		93E20F7E1E58BB810017F55F /* FableLevelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F7D1E58BB810017F55F /* FableLevelVM.swift */; };
+		93E20F801E58BE900017F55F /* ReadFirstStanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F7F1E58BE900017F55F /* ReadFirstStanza.swift */; };
+		93E20F821E58BF110017F55F /* ReadForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F811E58BF110017F55F /* ReadForward.swift */; };
+		93E20F841E58BF290017F55F /* ReadBackward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F831E58BF290017F55F /* ReadBackward.swift */; };
+		93E20F861E58BF430017F55F /* ReadLastStanzaBackward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F851E58BF430017F55F /* ReadLastStanzaBackward.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +105,13 @@
 		9391668D1E54F20B00F93C87 /* LightVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightVM.swift; sourceTree = "<group>"; };
 		939166911E54F30600F93C87 /* LevelVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelVM.swift; sourceTree = "<group>"; };
 		939166971E54FF1600F93C87 /* WaitLevelVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitLevelVM.swift; sourceTree = "<group>"; };
+		93E20F791E58B60C0017F55F /* WaitOneSecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitOneSecond.swift; sourceTree = "<group>"; };
+		93E20F7B1E58BB5C0017F55F /* FableLeveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FableLeveVC.swift; sourceTree = "<group>"; };
+		93E20F7D1E58BB810017F55F /* FableLevelVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FableLevelVM.swift; sourceTree = "<group>"; };
+		93E20F7F1E58BE900017F55F /* ReadFirstStanza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadFirstStanza.swift; sourceTree = "<group>"; };
+		93E20F811E58BF110017F55F /* ReadForward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadForward.swift; sourceTree = "<group>"; };
+		93E20F831E58BF290017F55F /* ReadBackward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadBackward.swift; sourceTree = "<group>"; };
+		93E20F851E58BF430017F55F /* ReadLastStanzaBackward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadLastStanzaBackward.swift; sourceTree = "<group>"; };
 		9490BB64993BE2BA19D39CC4 /* Pods_BB2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BB2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B255FC23AD4670B8B9D74D2D /* Pods-BB2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2.release.xcconfig"; path = "Pods/Target Support Files/Pods-BB2/Pods-BB2.release.xcconfig"; sourceTree = "<group>"; };
 		B57B65A926BAC55AF9154ED5 /* Pods-BB2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BB2UITests/Pods-BB2UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,9 +189,8 @@
 			children = (
 				9333034A1E39B8EC00E2C957 /* PuzzleId.swift */,
 				9361F1C21E4E936D00F9C59C /* Puzzle.swift */,
-				9361F1C61E4E954A00F9C59C /* WaitOneMinute.swift */,
-				9361F1CA1E4E96F500F9C59C /* WaitOneHour.swift */,
-				9361F1C81E4E96E800F9C59C /* WaitOneDay.swift */,
+				93E20F881E58BF760017F55F /* Fable */,
+				93E20F871E58BF660017F55F /* Wait */,
 			);
 			name = Puzzles;
 			sourceTree = "<group>";
@@ -272,6 +285,8 @@
 				936DD7221E4A8AB100FE83FC /* WaitLevelVC.swift */,
 				939166971E54FF1600F93C87 /* WaitLevelVM.swift */,
 				932AF3B21E39E594007B8D5E /* ReadingPuzzleVC.swift */,
+				93E20F7B1E58BB5C0017F55F /* FableLeveVC.swift */,
+				93E20F7D1E58BB810017F55F /* FableLevelVM.swift */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -286,6 +301,28 @@
 				939166891E54F1F200F93C87 /* MenuItem.swift */,
 			);
 			name = MainMenu;
+			sourceTree = "<group>";
+		};
+		93E20F871E58BF660017F55F /* Wait */ = {
+			isa = PBXGroup;
+			children = (
+				93E20F791E58B60C0017F55F /* WaitOneSecond.swift */,
+				9361F1C61E4E954A00F9C59C /* WaitOneMinute.swift */,
+				9361F1CA1E4E96F500F9C59C /* WaitOneHour.swift */,
+				9361F1C81E4E96E800F9C59C /* WaitOneDay.swift */,
+			);
+			name = Wait;
+			sourceTree = "<group>";
+		};
+		93E20F881E58BF760017F55F /* Fable */ = {
+			isa = PBXGroup;
+			children = (
+				93E20F7F1E58BE900017F55F /* ReadFirstStanza.swift */,
+				93E20F811E58BF110017F55F /* ReadForward.swift */,
+				93E20F831E58BF290017F55F /* ReadBackward.swift */,
+				93E20F851E58BF430017F55F /* ReadLastStanzaBackward.swift */,
+			);
+			name = Fable;
 			sourceTree = "<group>";
 		};
 		AA2E2771859727FAC28D623B /* Pods */ = {
@@ -599,12 +636,18 @@
 				9391668C1E54F1FD00F93C87 /* MainMenuVM.swift in Sources */,
 				9361F1C31E4E936D00F9C59C /* Puzzle.swift in Sources */,
 				932AF3B31E39E594007B8D5E /* ReadingPuzzleVC.swift in Sources */,
+				93E20F7E1E58BB810017F55F /* FableLevelVM.swift in Sources */,
 				934EBB2A1E309DE2005E44FB /* Colors.swift in Sources */,
+				93E20F861E58BF430017F55F /* ReadLastStanzaBackward.swift in Sources */,
+				93E20F7C1E58BB5C0017F55F /* FableLeveVC.swift in Sources */,
 				939166921E54F30600F93C87 /* LevelVM.swift in Sources */,
 				934EBB221E3081AD005E44FB /* LightButton.swift in Sources */,
+				93E20F821E58BF110017F55F /* ReadForward.swift in Sources */,
+				93E20F801E58BE900017F55F /* ReadFirstStanza.swift in Sources */,
 				934EBB241E3082E0005E44FB /* GridPosition.swift in Sources */,
 				9333034B1E39B8EC00E2C957 /* PuzzleId.swift in Sources */,
 				9361F1C91E4E96E800F9C59C /* WaitOneDay.swift in Sources */,
+				93E20F841E58BF290017F55F /* ReadBackward.swift in Sources */,
 				936DD7231E4A8AB100FE83FC /* WaitLevelVC.swift in Sources */,
 				9333034D1E39BF6E00E2C957 /* SegueHandlerType.swift in Sources */,
 				9330544D1E3A8C2C00AB7D91 /* AnimationError.swift in Sources */,
@@ -616,6 +659,7 @@
 				9391668A1E54F1F200F93C87 /* MenuItem.swift in Sources */,
 				930928491E3AC9D4007DEA67 /* String+.swift in Sources */,
 				939166981E54FF1600F93C87 /* WaitLevelVM.swift in Sources */,
+				93E20F7A1E58B60C0017F55F /* WaitOneSecond.swift in Sources */,
 				9361F1CB1E4E96F500F9C59C /* WaitOneHour.swift in Sources */,
 				9361F1C71E4E954A00F9C59C /* WaitOneMinute.swift in Sources */,
 				934EBB281E309B5C005E44FB /* Values.swift in Sources */,

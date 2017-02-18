@@ -114,19 +114,17 @@ extension WaitLevelVC {
         var increment:CGFloat = 0
 
         switch timerView.frame.height {
-        case 0..<buttonSepDis:
-            increment = buttonSepDis/60
-        case buttonSepDis..<buttonSepDis*2:
-            increment = buttonSepDis/(60*60)
+        case 0..<buttonSepDis*2:
+            increment = buttonSepDis*2/60
         case buttonSepDis*2..<buttonSepDis*3:
-            increment = buttonSepDis/(60*60*24)
+            increment = buttonSepDis/(60*60)
         case buttonSepDis*3..<buttonSepDis*4:
+            increment = buttonSepDis/(60*60*24)
+        case buttonSepDis*4...buttonSepDis*5:
             increment = buttonSepDis/60
-        case buttonSepDis*4:
+        default:
             increment = 0
             stopTimer()
-        default:
-            break
         }
         
         //update the timer view with the new increment size

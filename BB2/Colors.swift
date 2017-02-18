@@ -17,6 +17,10 @@ struct Colors {
         static var bg = UIColor(red: 0.596, green: 0.933, blue: 0.525, alpha: 1.00)
         static var light = UIColor(red: 0.325, green: 0.812, blue: 0.286, alpha: 1.00)
     }
+    struct Fable {
+        static var light = UIColor(red: 0.953, green: 0.647, blue: 0.212, alpha: 1.00)
+    }
+    
     struct Reading {
         static var light = UIColor(red: 0.953, green: 0.647, blue: 0.212, alpha: 1.00)
     }
