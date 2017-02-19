@@ -50,9 +50,10 @@ class LowPowerLevelVC: UIViewController {
         }
     }
     
-    func powerStateChanged(_ notification: Notification) {
+    func powerStateChanged() {
         for puzzle in lowPowerVM.puzzles {
-            puzzle.checkForSuccess(value: 0)
+            let isPowerStateChanged = true
+            puzzle.checkForSuccess(value: isPowerStateChanged)
         }
     }
 }

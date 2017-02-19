@@ -14,8 +14,13 @@ class LowPower: Puzzle {
         return UserDefaults.standard.bool(forKey: puzzleId.rawValue)
     }
     
-    func checkForSuccess(value:Int?) {
-        if ProcessInfo.processInfo.isLowPowerModeEnabled {
+    func checkForSuccess(value isBatterModeChanged:Any?) {
+        guard let isBatterModeChanged = isBatterModeChanged as? Bool else {
+            print("\(type(of:self)): Not passed a valid boolean")
+            return
+        }
+        
+        if isBatterModeChanged {
             NotificationCenter.default.post(
                 name: Notification.Name(puzzleId.rawValue),
                 object: nil

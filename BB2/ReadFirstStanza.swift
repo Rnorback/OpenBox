@@ -14,8 +14,8 @@ class ReadFirstStanza: Puzzle {
         return UserDefaults.standard.bool(forKey: puzzleId.rawValue)
     }
     
-    func checkForSuccess(value secondsPassed:Int?) {
-        if secondsPassed == 60 {
+    func checkForSuccess(value:Any?) {
+        if false {
             NotificationCenter.default.post(
                 name: Notification.Name(puzzleId.rawValue),
                 object: nil

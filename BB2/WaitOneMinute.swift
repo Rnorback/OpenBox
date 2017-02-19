@@ -14,8 +14,8 @@ class WaitOneMinute: Puzzle {
         return UserDefaults.standard.bool(forKey: puzzleId.rawValue)
     }
     
-    func checkForSuccess(value secondsPassed:Int?) {
-        guard let secondsPassed = secondsPassed else {
+    func checkForSuccess(value secondsPassed:Any?) {
+        guard let secondsPassed = secondsPassed as? Int else {
             print("\(type(of:self)): Not passed a valid integer")
             return
         }

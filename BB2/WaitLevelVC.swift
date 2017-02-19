@@ -40,6 +40,11 @@ class WaitLevelVC: UIViewController {
         allowScreenSleep()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        print("Fired")
+        print(UIDevice.current.orientation)
+    }
+    
     func deviceOrientationDidChange() {
         if UIDevice.current.orientation == .faceDown {
             startTimer()
