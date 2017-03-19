@@ -15,10 +15,10 @@ class FableLevelVM: LevelVM {
     ]
     
     init() {
-        addLevelLights()
+        prepLightData()
     }
     
-    fileprivate func addLevelLights() {
+    func prepLightData() {
         for puzzle in puzzles {
             let lightVM = LightVM(
                 color: Colors.Fable.light,

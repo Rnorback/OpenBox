@@ -19,10 +19,10 @@ class WaitLevelVM: LevelVM {
     ]
     
     init() {
-        addLevelLights()
+        prepLightData()
     }
     
-    fileprivate func addLevelLights() {
+    func prepLightData() {
         for puzzle in puzzles {
             let lightVM = LightVM(
                 color: Colors.Wait.light,

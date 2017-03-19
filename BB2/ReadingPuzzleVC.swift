@@ -24,6 +24,10 @@ class ReadingPuzzleVC: UIViewController {
     fileprivate var recognitionTask: SFSpeechRecognitionTask?
     fileprivate let audioEngine = AVAudioEngine()
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

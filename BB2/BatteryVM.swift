@@ -10,22 +10,28 @@ import Foundation
 
 class BatteryVM: LevelVM {
     var lightData: [LightVM] = []
-    var puzzles: [Puzzle] = [YellowBattery(), RedBattery(), GreenBattery(), WhiteBattery()]
+    var puzzles: [Puzzle] = [
+        WhiteBattery(),
+        GreenBattery(),
+        YellowBattery(),
+        RedBattery()
+    ]
     
     init() {
-        addLevelLights()
+        prepLightData()
     }
     
-    fileprivate func addLevelLights() {
+    func prepLightData() {
         for puzzle in puzzles {
             let lightVM = LightVM(
-                color: Colors.LowPower.light,
+                color: Colors.Battery.light,
                 center: GridPosition(x: 0, y: 0).center,
                 puzzleId: puzzle.puzzleId
             )
-            
             lightData.append(lightVM)
         }
     }
+    
+    
 
 }

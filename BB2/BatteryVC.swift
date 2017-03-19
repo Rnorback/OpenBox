@@ -8,12 +8,12 @@
 
 import UIKit
 
-class LowPowerLevelVC: UIViewController {
+class BatteryVC: UIViewController {
     
-    var lowPowerVM:LowPowerLevelVM = LowPowerLevelVM()
-    let batteryLightDistance:CGFloat = 70
-    var batteryLevel: CGFloat {
-        return CGFloat(UIDevice.current.batteryLevel)
+    var batteryVM:BatteryVM = BatteryVM()
+    let horizontalLightBatterySpacing:CGFloat = 100
+    var verticalLightSpacing:CGFloat {
+        return view.frame.height/CGFloat(batteryVM.puzzles.count)
     }
     
     var label:UILabel = UILabel()
@@ -23,7 +23,7 @@ class LowPowerLevelVC: UIViewController {
         view.backgroundColor = Colors.Menu.bg
         UIDevice.current.isBatteryMonitoringEnabled = true
         layoutLights()
-        layoutBattery()
+        layoutBatteries()
         addObservers()
     }
     
@@ -47,45 +47,24 @@ class LowPowerLevelVC: UIViewController {
     }
     
     
-    func layoutBattery() {
-        let batteryImageView:UIImageView = UIImageView(image: #imageLiteral(resourceName: "empty-battery"))
-
-        batteryImageView.center = CGPoint(
-            x: view.frame.width/2,
-            y: view.frame.height/2 + batteryLightDistance/2
-        )
-        batteryImageView.layer.zPosition = 1
-        
-        let zeroBatteryFrame = CGRect(
-            x: batteryImageView.frame.origin.x + 2,
-            y: batteryImageView.frame.origin.y + 2,
-            width: 0,
-            height: batteryImageView.frame.height - 4
-        )
-        
-        let insideBatteryFrame = CGRect(
-            x: batteryImageView.frame.origin.x + 2,
-            y: batteryImageView.frame.origin.y + 2,
-            width: (batteryImageView.frame.width - 12) * batteryLevel,
-            height: batteryImageView.frame.height - 4
-        )
-        let yellowView = UIView(frame: zeroBatteryFrame)
-        yellowView.backgroundColor = Colors.LowPower.yellow
-        yellowView.layer.cornerRadius = 4
-        view.addSubview(yellowView)
-        view.addSubview(batteryImageView)
-        
-        UIView.animate(withDuration: 1) {
-            yellowView.frame = insideBatteryFrame
+    func layoutBatteries() {
+        for (index, puzzle) in batteryVM.puzzles.enumerated() {
+            let battery = BatteryView(puzzleId: puzzle.puzzleId)
+            battery.center = CGPoint(
+                x: view.frame.width/2 + horizontalLightBatterySpacing/2,
+                y: verticalLightSpacing/2 + verticalLightSpacing * CGFloat(index)
+            )
+            view.addSubview(battery)
         }
     }
-    
+
     func layoutLights() {
-        for lightVM in lowPowerVM.lightData {
+        for (index,lightVM) in batteryVM.lightData.enumerated() {
+            
             let light = LightButton(lightVM: lightVM)
             light.center = CGPoint(
-                x: view.frame.width/2,
-                y: view.frame.height/2 - batteryLightDistance/2
+                x: view.frame.width/2 - horizontalLightBatterySpacing,
+                y: verticalLightSpacing/2 + verticalLightSpacing * CGFloat(index)
             )
             view.addSubview(light)
             light.addTarget(self, action: #selector(lightPressed), for: .touchUpInside)
@@ -94,7 +73,7 @@ class LowPowerLevelVC: UIViewController {
 }
 
 //MARK: - Notification Handling
-extension LowPowerLevelVC {
+extension BatteryVC {
     
     func lightPressed() {
         print("Light pressed")
@@ -106,22 +85,30 @@ extension LowPowerLevelVC {
         
         if UIDevice.current.batteryState == .charging {
             //green
+            let greenPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .greenBattery}.first
+            greenPuzzle?.checkForSuccess(value: true)
         }
     }
     
     func batteryLevelDidChange(_ notification: NSNotification){
         // The battery's level did change (98%, 99%, ...)
         
-        
-        if UIDevice.current.batteryLevel <= 20.0 {
+        if UIDevice.current.batteryLevel <= 0.20 {
             //red
+            let redPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .redBattery}.first
+            redPuzzle?.checkForSuccess(value: true)
         }
     }
     
     func willResignActive(_ notification: NSNotification) {
-        
-        if UIDevice.current.batteryLevel > 20.0 && UIDevice.current.batteryState != .charging {
+      
+        if UIDevice.current.batteryLevel > 0.20 &&
+            UIDevice.current.batteryState != .charging &&
+            ProcessInfo.processInfo.isLowPowerModeEnabled == false
+            {
             //white
+            let whitePuzzle = batteryVM.puzzles.filter{$0.puzzleId == .whiteBattery}.first
+            whitePuzzle?.checkForSuccess(value: true)
         }
     }
     
@@ -129,10 +116,8 @@ extension LowPowerLevelVC {
         
         if ProcessInfo.processInfo.isLowPowerModeEnabled {
             //yellow
-        }
-        for puzzle in lowPowerVM.puzzles {
-            let isPowerStateChanged = true
-            puzzle.checkForSuccess(value: isPowerStateChanged)
+            let yellowPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .yellowBattery}.first
+            yellowPuzzle?.checkForSuccess(value: true)
         }
     }
 }

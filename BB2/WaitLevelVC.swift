@@ -14,7 +14,9 @@ class WaitLevelVC: UIViewController {
     var waitLevelVM:WaitLevelVM = WaitLevelVM()
     var timerView:UIView = UIView()
     var timer:Timer = Timer()
-    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     var numLights:Int {
         return waitLevelVM.puzzles.count
     }

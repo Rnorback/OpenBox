@@ -20,5 +20,8 @@ enum PuzzleId: String {
     case readBackward
     case readLastStanzaBackward
     
-    case lowPower
+    case yellowBattery
+    case greenBattery
+    case whiteBattery
+    case redBattery
 }

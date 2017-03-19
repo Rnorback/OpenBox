@@ -1,5 +1,5 @@
 //
-//  LowPowerLevel.swift
+//  YellowBattery.swift
 //  BB2
 //
 //  Created by Rob Norback on 2/18/17.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-class LowPower: Puzzle {
-    var puzzleId: PuzzleId = .lowPower
+class YellowBattery: Puzzle {
+    var puzzleId: PuzzleId = .yellowBattery
     var isSolved: Bool {
         return UserDefaults.standard.bool(forKey: puzzleId.rawValue)
     }
@@ -28,5 +28,4 @@ class LowPower: Puzzle {
             UserDefaults.standard.set(true, forKey: puzzleId.rawValue)
         }
     }
-
 }

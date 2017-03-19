@@ -13,6 +13,6 @@ enum SegueId: String {
     case heartRate
     case coolPlaces
     case wait
-    case lowPower
+    case battery
     //    case bluetooth
 }

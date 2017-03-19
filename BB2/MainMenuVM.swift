@@ -14,7 +14,7 @@ class MainMenuVM {
     init() {
         addWaitMenuItem()
         addFableMenuItem()
-        addLowPowerMenuItem()
+        addBatteryMenuItem()
     }
     
     func addWaitMenuItem() {
@@ -87,18 +87,36 @@ class MainMenuVM {
         menuItems.append(readingMenuItem)
     }
     
-    func addLowPowerMenuItem() {
-        let color = Colors.LowPower.light
+    func addBatteryMenuItem() {
+        let color = Colors.Battery.light
         
-        let lowPower = LightVM(
+        let yellowBattery = LightVM(
             color: color,
             center: GridPosition(x: 6, y: 9).center,
-            puzzleId: .lowPower
+            puzzleId: .yellowBattery
+        )
+        
+        let redBattery = LightVM(
+            color: color,
+            center: GridPosition(x: 7, y: 9).center,
+            puzzleId: .redBattery
+        )
+        
+        let greenBattery = LightVM(
+            color: color,
+            center: GridPosition(x: 8, y: 9).center,
+            puzzleId: .greenBattery
+        )
+        
+        let whiteBattery = LightVM(
+            color: color,
+            center: GridPosition(x: 8, y: 10).center,
+            puzzleId: .whiteBattery
         )
         
         let lowPowerMenuItem = MenuItem(
-            segueId: .lowPower,
-            lightData: [lowPower]
+            segueId: .battery,
+            lightData: [yellowBattery, redBattery, greenBattery, whiteBattery]
         )
         
         menuItems.append(lowPowerMenuItem)

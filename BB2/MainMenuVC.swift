@@ -69,9 +69,14 @@ class MainMenuVC: UIViewController {
         )
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     var scrollView:UIScrollView!
     var lightGroups:[LightGroup] = []
     var mainMenuVM:MainMenuVM = MainMenuVM()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -149,7 +154,7 @@ extension MainMenuVC: SegueHandlerType {
         case showHeartRate
         case showCoolPlaces
         case showWait
-        case showLowPower
+        case showBattery
         
         init(segueId:SegueId) {
             switch segueId {
@@ -161,8 +166,8 @@ extension MainMenuVC: SegueHandlerType {
                 self = .showCoolPlaces
             case .wait:
                 self = .showWait
-            case .lowPower:
-                self = .showLowPower
+            case .battery:
+                self = .showBattery
             }
         }
     }

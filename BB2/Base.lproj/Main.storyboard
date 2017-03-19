@@ -29,7 +29,7 @@
                         <segue destination="Lfz-vG-ABa" kind="show" identifier="showHeartRate" id="mLq-1N-DuN"/>
                         <segue destination="8hO-Xn-VBY" kind="show" identifier="showCoolPlaces" id="dBJ-YS-gMf"/>
                         <segue destination="Zul-77-GGB" kind="show" identifier="showWait" id="8gg-jt-REs"/>
-                        <segue destination="u0t-43-8oh" kind="show" identifier="showLowPower" id="Fph-kk-QCu"/>
+                        <segue destination="u0t-43-8oh" kind="show" identifier="showBattery" id="Fph-kk-QCu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="2046" y="116"/>
         </scene>
-        <!--Low Power LevelVC-->
+        <!--BatteryVC-->
         <scene sceneID="wQS-rx-bns">
             <objects>
-                <viewController id="u0t-43-8oh" customClass="LowPowerLevelVC" customModule="BB2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="u0t-43-8oh" customClass="BatteryVC" customModule="BB2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fg8-Md-2Zg"/>
                         <viewControllerLayoutGuide type="bottom" id="r2W-U7-DRG"/>
