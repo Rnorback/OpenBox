@@ -8,9 +8,9 @@
 
 import Foundation
 
-class LowPowerLevelVM: LevelVM {
+class BatteryVM: LevelVM {
     var lightData: [LightVM] = []
-    var puzzles: [Puzzle] = [LowPower()]
+    var puzzles: [Puzzle] = [YellowBattery(), RedBattery(), GreenBattery(), WhiteBattery()]
     
     init() {
         addLevelLights()
