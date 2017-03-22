@@ -1,3 +1,14 @@
 # BlackBox2
 
-This repo is for learning purposes. You make use snippets of this code under the MIT licence.  You may not post full levels to the app store as your own.
+Blackbox is one of my favorite apps. Whenever I play it, I think about all the APIs I don't get to play with.
+
+So I did what any developer would do who likes to play with cool toys, I made my own version!
+
+It's the perfect playground for any iOS developer to create weekend projects that play with any API in iOS. I'm currently running this as a little experiment.  If you'd like to fork the repo or PR a puzzle, go for it!  It would be fun to put an open source version of black box on the store.
+
+**Some Ground Rules**
+- The only thing I'd ask is please don't post my puzzles to the app store without permission. 
+- I will do the same for you. I will not post any puzzle in this repo without the creator's permission (I'll probably ask about it in the PR)
+- Also, I plan I posting this app to the store someday (perhaps I'll post a target date soon).
+- I don't plan on charging for anything this is just for fun. If we do charge for anything, we'll likely donate it all to charity.
+- Please feel free to contact me through my website if you have any quesitons, RobNorback.com.
