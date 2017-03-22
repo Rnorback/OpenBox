@@ -6,21 +6,19 @@
 //  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class GreenBattery: Puzzle {
     var puzzleId: PuzzleId = .greenBattery
     var isSolved: Bool {
         return UserDefaults.standard.bool(forKey: puzzleId.rawValue)
     }
+    var isCharging: Bool {
+        return UIDevice.current.batteryState == .charging
+    }
     
-    func checkForSuccess(value isBatterModeChanged:Any?) {
-        guard let isBatterModeChanged = isBatterModeChanged as? Bool else {
-            print("\(type(of:self)): Not passed a valid boolean")
-            return
-        }
-        
-        if isBatterModeChanged {
+    func checkForSuccess(value:Any? = nil) {
+        if isCharging {
             NotificationCenter.default.post(
                 name: Notification.Name(puzzleId.rawValue),
                 object: nil

@@ -27,6 +27,12 @@ class BatteryVC: UIViewController {
         addObservers()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        batteryVM.puzzles.forEach { (puzzle) in
+            puzzle.checkForSuccess(value: nil)
+        }
+    }
+    
     deinit {
         print("deinit")
         removeObservers()
@@ -77,47 +83,28 @@ extension BatteryVC {
     
     func lightPressed() {
         print("Light pressed")
-        
     }
     
     func batteryStateDidChange(_ notification: NSNotification){
         // The stage did change: plugged, unplugged, full charge...
-        
-        if UIDevice.current.batteryState == .charging {
-            //green
-            let greenPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .greenBattery}.first
-            greenPuzzle?.checkForSuccess(value: true)
-        }
+        let greenPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .greenBattery}.first
+        greenPuzzle?.checkForSuccess(value: true)
     }
     
     func batteryLevelDidChange(_ notification: NSNotification){
         // The battery's level did change (98%, 99%, ...)
-        
-        if UIDevice.current.batteryLevel <= 0.20 {
-            //red
-            let redPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .redBattery}.first
-            redPuzzle?.checkForSuccess(value: true)
-        }
+        let redPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .redBattery}.first
+        redPuzzle?.checkForSuccess(value: true)
     }
     
     func willResignActive(_ notification: NSNotification) {
-      
-        if UIDevice.current.batteryLevel > 0.20 &&
-            UIDevice.current.batteryState != .charging &&
-            ProcessInfo.processInfo.isLowPowerModeEnabled == false
-            {
-            //white
-            let whitePuzzle = batteryVM.puzzles.filter{$0.puzzleId == .whiteBattery}.first
-            whitePuzzle?.checkForSuccess(value: true)
-        }
+        // Checks if the app was exited
+        let whitePuzzle = batteryVM.puzzles.filter{$0.puzzleId == .whiteBattery}.first
+        whitePuzzle?.checkForSuccess(value: nil)
     }
     
     func powerStateChanged(_ notification: NSNotification) {
-        
-        if ProcessInfo.processInfo.isLowPowerModeEnabled {
-            //yellow
-            let yellowPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .yellowBattery}.first
-            yellowPuzzle?.checkForSuccess(value: true)
-        }
+        let yellowPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .yellowBattery}.first
+        yellowPuzzle?.checkForSuccess(value: true)
     }
 }
