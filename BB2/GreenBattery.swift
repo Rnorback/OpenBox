@@ -13,12 +13,13 @@ class GreenBattery: Puzzle {
     var isSolved: Bool {
         return UserDefaults.standard.bool(forKey: puzzleId.rawValue)
     }
-    var isCharging: Bool {
-        return UIDevice.current.batteryState == .charging
+    var isGreen: Bool {
+        return UIDevice.current.batteryState == .charging &&
+            ProcessInfo.processInfo.isLowPowerModeEnabled == false
     }
     
     func checkForSuccess(value:Any? = nil) {
-        if isCharging {
+        if isGreen {
             NotificationCenter.default.post(
                 name: Notification.Name(puzzleId.rawValue),
                 object: nil

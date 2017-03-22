@@ -14,8 +14,7 @@ class YellowBattery: Puzzle {
         return UserDefaults.standard.bool(forKey: puzzleId.rawValue)
     }
     var isYellow: Bool {
-        return UIDevice.current.batteryState != .charging &&
-            ProcessInfo.processInfo.isLowPowerModeEnabled == true
+        return ProcessInfo.processInfo.isLowPowerModeEnabled == true
     }
     
     func checkForSuccess(value:Any?) {

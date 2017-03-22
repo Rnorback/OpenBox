@@ -105,6 +105,6 @@ extension BatteryVC {
     
     func powerStateChanged(_ notification: NSNotification) {
         let yellowPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .yellowBattery}.first
-        yellowPuzzle?.checkForSuccess(value: true)
+        yellowPuzzle?.checkForSuccess(value: nil)
     }
 }

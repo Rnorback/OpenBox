@@ -20,12 +20,7 @@ class WhiteBattery: Puzzle {
     }
     
     func checkForSuccess(value isBatterModeChanged:Any?) {
-        guard let isBatterModeChanged = isBatterModeChanged as? Bool else {
-            print("\(type(of:self)): Not passed a valid boolean")
-            return
-        }
-        
-        if isBatterModeChanged {
+        if isWhite {
             NotificationCenter.default.post(
                 name: Notification.Name(puzzleId.rawValue),
                 object: nil
