@@ -40,6 +40,7 @@
 		9391668E1E54F20B00F93C87 /* LightVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9391668D1E54F20B00F93C87 /* LightVM.swift */; };
 		939166921E54F30600F93C87 /* LevelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939166911E54F30600F93C87 /* LevelVM.swift */; };
 		939166981E54FF1600F93C87 /* WaitLevelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939166971E54FF1600F93C87 /* WaitLevelVM.swift */; };
+		93AC43301E8228F200D0F43D /* WaveFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC432F1E8228F200D0F43D /* WaveFormView.swift */; };
 		93CC77F61E5BDF1200A7623A /* RedBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F51E5BDF1200A7623A /* RedBattery.swift */; };
 		93CC77F81E5BDF1B00A7623A /* GreenBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F71E5BDF1B00A7623A /* GreenBattery.swift */; };
 		93CC77FA1E5BDF2400A7623A /* WhiteBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F91E5BDF2400A7623A /* WhiteBattery.swift */; };
@@ -113,6 +114,7 @@
 		9391668D1E54F20B00F93C87 /* LightVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightVM.swift; sourceTree = "<group>"; };
 		939166911E54F30600F93C87 /* LevelVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelVM.swift; sourceTree = "<group>"; };
 		939166971E54FF1600F93C87 /* WaitLevelVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitLevelVM.swift; sourceTree = "<group>"; };
+		93AC432F1E8228F200D0F43D /* WaveFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveFormView.swift; sourceTree = "<group>"; };
 		93CC77F51E5BDF1200A7623A /* RedBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedBattery.swift; sourceTree = "<group>"; };
 		93CC77F71E5BDF1B00A7623A /* GreenBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenBattery.swift; sourceTree = "<group>"; };
 		93CC77F91E5BDF2400A7623A /* WhiteBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteBattery.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				932AF3B21E39E594007B8D5E /* ReadingPuzzleVC.swift */,
+				93AC432F1E8228F200D0F43D /* WaveFormView.swift */,
 			);
 			name = Reading;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				93CC77FA1E5BDF2400A7623A /* WhiteBattery.swift in Sources */,
 				9391668A1E54F1F200F93C87 /* MenuItem.swift in Sources */,
 				930928491E3AC9D4007DEA67 /* String+.swift in Sources */,
+				93AC43301E8228F200D0F43D /* WaveFormView.swift in Sources */,
 				939166981E54FF1600F93C87 /* WaitLevelVM.swift in Sources */,
 				93E20F7A1E58B60C0017F55F /* WaitOneSecond.swift in Sources */,
 				9361F1CB1E4E96F500F9C59C /* WaitOneHour.swift in Sources */,

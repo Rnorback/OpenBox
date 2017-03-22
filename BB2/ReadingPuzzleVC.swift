@@ -9,6 +9,9 @@
 import UIKit
 import Speech
 
+import UIKit
+import AVFoundation
+
 class ReadingPuzzleVC: UIViewController {
     
     @IBOutlet var spokenTextField: UITextView!
@@ -23,6 +26,9 @@ class ReadingPuzzleVC: UIViewController {
     fileprivate var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     fileprivate var recognitionTask: SFSpeechRecognitionTask?
     fileprivate let audioEngine = AVAudioEngine()
+    
+    var audioRecorder: AVAudioRecorder!
+    @IBOutlet weak var waveformView: WaveformView!
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -39,6 +45,46 @@ class ReadingPuzzleVC: UIViewController {
         storyText = storyLabel.text!
         storyWordArray = storyText.components(separatedBy: " ")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        audioRecorder = audioRecorder(URL(fileURLWithPath:"/dev/null"))
+        audioRecorder.record()
+        
+        let displayLink = CADisplayLink(target: self, selector: #selector(updateMeters))
+        displayLink.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+    }
+    
+    deinit {
+        print("Deinit audio puzzle")
+        audioRecorder.stop()
+    }
+    
+    func updateMeters() {
+        audioRecorder.updateMeters()
+        let normalizedValue = pow(10, audioRecorder.averagePower(forChannel: 0) / 20) * 10
+        print(normalizedValue)
+        waveformView.updateWithLevel(CGFloat(normalizedValue))
+    }
+    
+    func audioRecorder(_ filePath: URL) -> AVAudioRecorder {
+        let recorderSettings: [String : AnyObject] = [
+            AVSampleRateKey: 44100.0 as AnyObject,
+            AVFormatIDKey: NSNumber(value: kAudioFormatMPEG4AAC),
+            AVNumberOfChannelsKey: 2 as AnyObject,
+            AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue as AnyObject
+        ]
+        
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
+        
+        let audioRecorder = try! AVAudioRecorder(url: filePath, settings: recorderSettings)
+        audioRecorder.isMeteringEnabled = true
+        audioRecorder.prepareToRecord()
+        
+        return audioRecorder
+    }
+
     
     func requestSpeechAuthorization() {
         SFSpeechRecognizer.requestAuthorization { (authStatus) in
