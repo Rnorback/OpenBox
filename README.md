@@ -4,6 +4,8 @@ Blackbox is one of my favorite apps. Whenever I play it, I think about all the A
 
 So I did what any developer would do who likes to play with cool toys, I made my own version!
 
+<img width="283" alt="screen shot 2017-03-21 at 11 18 48 pm" src="https://cloud.githubusercontent.com/assets/643857/24184762/c7cbdc7a-0e8c-11e7-9bcd-1b0bc9cee522.png">
+
 It's the perfect playground for any iOS developer to create weekend projects that play with any API in iOS. I'm currently running this as a little experiment.  If you'd like to fork the repo or PR a puzzle, go for it!  It would be fun to put an open source version of black box on the store.
 
 **Some Ground Rules**
