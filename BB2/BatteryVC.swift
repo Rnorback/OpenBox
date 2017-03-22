@@ -1,5 +1,5 @@
 //
-//  LowPowerLevelVC.swift
+//  BatteryVC.swift
 //  BB2
 //
 //  Created by Rob Norback on 2/18/17.

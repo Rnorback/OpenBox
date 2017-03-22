@@ -1,5 +1,5 @@
 //
-//  WaitLevelVM.swift
+//  WaitVM.swift
 //  BB2
 //
 //  Created by Rob Norback on 2/15/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WaitLevelVM: LevelVM {
+class WaitVM: LevelVM {
     
     var lightData:[LightVM] = []
     var puzzles:[Puzzle] = [

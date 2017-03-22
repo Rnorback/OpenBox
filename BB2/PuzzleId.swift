@@ -24,4 +24,6 @@ enum PuzzleId: String {
     case greenBattery
     case whiteBattery
     case redBattery
+    
+    case hitTheFloor
 }

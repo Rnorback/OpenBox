@@ -56,6 +56,11 @@ class ReadingPuzzleVC: UIViewController {
         displayLink.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        audioRecorder.stop()
+    }
+    
     deinit {
         print("Deinit audio puzzle")
         audioRecorder.stop()

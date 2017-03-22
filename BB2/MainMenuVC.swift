@@ -155,6 +155,7 @@ extension MainMenuVC: SegueHandlerType {
         case showCoolPlaces
         case showWait
         case showBattery
+        case showFallingBlock
         
         init(segueId:SegueId) {
             switch segueId {
@@ -168,6 +169,8 @@ extension MainMenuVC: SegueHandlerType {
                 self = .showWait
             case .battery:
                 self = .showBattery
+            case .fallingBlock:
+                self = .showFallingBlock
             }
         }
     }

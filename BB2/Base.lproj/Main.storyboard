@@ -30,6 +30,7 @@
                         <segue destination="8hO-Xn-VBY" kind="show" identifier="showCoolPlaces" id="dBJ-YS-gMf"/>
                         <segue destination="Zul-77-GGB" kind="show" identifier="showWait" id="8gg-jt-REs"/>
                         <segue destination="u0t-43-8oh" kind="show" identifier="showBattery" id="Fph-kk-QCu"/>
+                        <segue destination="l15-TP-Yi7" kind="show" identifier="showFallingBlock" id="xY5-zf-1zF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -191,6 +192,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAc-xL-mXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2046" y="844"/>
+        </scene>
+        <!--Falling BlockVC-->
+        <scene sceneID="Gip-Z3-gSy">
+            <objects>
+                <viewController id="l15-TP-Yi7" customClass="FallingBlockVC" customModule="BB2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hOk-cT-L30"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mua-Eg-gZR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oMu-fs-ueg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="o6l-hh-Pya" appends="YES" id="jsG-TO-vsb"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFH-be-kRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="o6l-hh-Pya">
+                    <connections>
+                        <action selector="handlePanWithSender:" destination="l15-TP-Yi7" id="8oI-U9-jAY"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1044" y="859"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qwp-cB-ifT">

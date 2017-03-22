@@ -14,5 +14,6 @@ enum SegueId: String {
     case coolPlaces
     case wait
     case battery
+    case fallingBlock
     //    case bluetooth
 }

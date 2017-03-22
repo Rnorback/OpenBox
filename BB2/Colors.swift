@@ -10,6 +10,11 @@ import UIKit
 
 struct Colors {
     
+    struct FallingBlock {
+        static var light = UIColor.yellow
+        static var block = UIColor.yellow
+    }
+    
     struct Battery {
         static var light = UIColor(red: 0.169, green: 0.424, blue: 0.624, alpha: 1.00)
         static var yellow = UIColor(red: 0.996, green: 0.796, blue: 0.184, alpha: 1.00)
@@ -25,9 +30,12 @@ struct Colors {
         static var bg = UIColor(red: 0.596, green: 0.933, blue: 0.525, alpha: 1.00)
         static var light = UIColor(red: 0.325, green: 0.812, blue: 0.286, alpha: 1.00)
     }
+    
     struct Fable {
         static var light = UIColor(red: 0.910, green: 0.188, blue: 0.188, alpha: 1.00)
     }
+    
+    
     
     struct Menu {
         static var bgDot = UIColor.lightGray

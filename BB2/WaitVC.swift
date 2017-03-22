@@ -1,5 +1,5 @@
 //
-//  WaitLevelVC.swift
+//  WaitVC.swift
 //  BB2
 //
 //  Created by Rob Norback on 2/7/17.
@@ -11,7 +11,7 @@ import UIKit
 class WaitLevelVC: UIViewController {
     
     var secondsPassed:Int = 0
-    var waitLevelVM:WaitLevelVM = WaitLevelVM()
+    var waitLevelVM:WaitVM = WaitVM()
     var timerView:UIView = UIView()
     var timer:Timer = Timer()
     override var prefersStatusBarHidden: Bool {

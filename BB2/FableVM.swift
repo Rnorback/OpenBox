@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FableLevelVM: LevelVM {
+class FableVM: LevelVM {
     var lightData: [LightVM] = []
     var puzzles: [Puzzle] = [
         ReadFirstStanza()

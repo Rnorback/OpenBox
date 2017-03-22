@@ -15,6 +15,7 @@ class MainMenuVM {
         addWaitMenuItem()
         addFableMenuItem()
         addBatteryMenuItem()
+        addFallingBlockMenuItems()
     }
     
     func addWaitMenuItem() {
@@ -120,6 +121,23 @@ class MainMenuVM {
         )
         
         menuItems.append(lowPowerMenuItem)
+    }
+    
+    func addFallingBlockMenuItems() {
+        let color = Colors.FallingBlock.light
+        
+        let hitTheFloor = LightVM(
+            color: color,
+            center: GridPosition(x: 10, y: 10).center,
+            puzzleId: .hitTheFloor
+        )
+        
+        let fallingBlockMenuItem = MenuItem(
+            segueId: .fallingBlock,
+            lightData: [hitTheFloor]
+        )
+        
+        menuItems.append(fallingBlockMenuItem)
     }
     
 }
