@@ -1,4 +1,4 @@
-# BlackBox2
+# OpenBox
 
 [Blackbox](https://itunes.apple.com/us/app/blackbox-think-outside-box/id962969578) by [Ryan McLeod](https://twitter.com/warpling) is one of my favorite apps. Whenever I play it, I think about all the APIs I don't get to play with.
 
@@ -10,13 +10,13 @@ Introducing OpenBox!
 
 It's the perfect playground for any iOS developer to create weekend projects that play with any API in iOS. I'm currently running this as a little experiment.  If you'd like to fork the repo or PR a puzzle, go for it!  It would be fun to put an open source version of black box on the store.
 
-**Get Added to the External Testers**
+# Get Added to the External Testers
 
 OpenBox is currently on testflight. If you'd like access to the testflight build, please just get in touch and send me your Apple Id.
 - Through twitter [@RobNorback](https://twitter.com/robnorback)
 - Or through my website contact form [RobNorback.com](http://www.robnorback.com/)
 
-**Some Ground Rules**
+# Some Ground Rules
 - The only thing I'd ask is please don't post my puzzles to the app store without permission. 
 - I will do the same for you. I will not post any puzzle in this repo without the creator's permission (I'll probably ask about it in the PR)
 - Also, I plan I posting this app to the store someday (perhaps I'll post a target date soon).
