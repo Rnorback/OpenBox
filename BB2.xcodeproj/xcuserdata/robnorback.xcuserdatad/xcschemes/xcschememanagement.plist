@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BB2 Widget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>BB2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>9326D15A1EBE835A00D54CA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9386AA3C1E3045D6007239C8</key>
 		<dict>
 			<key>primary</key>
