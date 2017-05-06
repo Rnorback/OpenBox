@@ -1,11 +1,3 @@
-//
-//  YellowBattery.swift
-//  BB2
-//
-//  Created by Rob Norback on 2/18/17.
-//  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
-//
-
 import UIKit
 
 class YellowBattery: Puzzle {
@@ -17,7 +9,7 @@ class YellowBattery: Puzzle {
         return ProcessInfo.processInfo.isLowPowerModeEnabled == true
     }
     
-    func checkForSuccess(value:Any?) {
+    func checkForSuccess(value:Any? = nil) {
         if isYellow {
             NotificationCenter.default.post(
                 name: Notification.Name(puzzleId.rawValue),

@@ -1,11 +1,3 @@
-//
-//  FallingBlockVC.swift
-//  BB2
-//
-//  Created by Rob Norback on 3/21/17.
-//  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
-//
-
 import UIKit
 import CoreMotion
 
@@ -36,7 +28,7 @@ class FallingBlockVC: UIViewController {
         
         squareView = UIView(frame: CGRect(x: 20, y: 20, width: 20, height: 20))
         squareView.backgroundColor = UIColor.blue
-        squareView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI/4.0))
+        squareView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/4.0))
         view.addSubview(squareView)
         
         let collision = UICollisionBehavior(items: [squareView])
@@ -56,10 +48,11 @@ class FallingBlockVC: UIViewController {
         setupAccelerometer()
         animator.addBehavior(gravity)
         
-//        let itemBehavior = UIDynamicItemBehavior(items: [squareView])
-//        itemBehavior.elasticity = 0.6
-//        itemBehavior.friction = 0.0
-//        animator.addBehavior(itemBehavior)
+        let itemBehavior = UIDynamicItemBehavior(items: [squareView])
+        itemBehavior.elasticity = 0.3
+        //itemBehavior.friction = 0.0
+        itemBehavior.angularResistance = 0.0
+        animator.addBehavior(itemBehavior)
         
         gravity.action =  { [unowned self] in
             FallingBlockVC.count += 1

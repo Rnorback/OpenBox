@@ -1,11 +1,3 @@
-//
-//  Dot.swift
-//  BB2
-//
-//  Created by Rob Norback on 1/18/17.
-//  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
-//
-
 import UIKit
 
 class Dot: CAShapeLayer {
@@ -19,7 +11,7 @@ class Dot: CAShapeLayer {
             arcCenter: position,
             radius: radius,
             startAngle: CGFloat(0),
-            endAngle:CGFloat(M_PI * 2),
+            endAngle:CGFloat(Double.pi * 2),
             clockwise: true
         )
         

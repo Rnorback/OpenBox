@@ -1,11 +1,3 @@
-//
-//  BatteryVC.swift
-//  BB2
-//
-//  Created by Rob Norback on 2/18/17.
-//  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
-//
-
 import UIKit
 
 class BatteryVC: UIViewController {
@@ -87,24 +79,28 @@ extension BatteryVC {
     
     func batteryStateDidChange(_ notification: NSNotification){
         // The stage did change: plugged, unplugged, full charge...
-        let greenPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .greenBattery}.first
-        greenPuzzle?.checkForSuccess(value: true)
+        let greenPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .greenBattery}
+            .first as? GreenBattery
+        greenPuzzle?.checkForSuccess()
     }
     
     func batteryLevelDidChange(_ notification: NSNotification){
         // The battery's level did change (98%, 99%, ...)
-        let redPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .redBattery}.first
-        redPuzzle?.checkForSuccess(value: true)
+        let redPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .redBattery}
+            .first as? RedBattery
+        redPuzzle?.checkForSuccess()
     }
     
     func willResignActive(_ notification: NSNotification) {
         // Checks if the app was exited
-        let whitePuzzle = batteryVM.puzzles.filter{$0.puzzleId == .whiteBattery}.first
-        whitePuzzle?.checkForSuccess(value: nil)
+        let whitePuzzle = batteryVM.puzzles.filter{$0.puzzleId == .whiteBattery}
+            .first as? WhiteBattery
+        whitePuzzle?.checkForSuccess()
     }
     
     func powerStateChanged(_ notification: NSNotification) {
-        let yellowPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .yellowBattery}.first
-        yellowPuzzle?.checkForSuccess(value: nil)
+        let yellowPuzzle = batteryVM.puzzles.filter{$0.puzzleId == .yellowBattery}
+            .first as? YellowBattery
+        yellowPuzzle?.checkForSuccess()
     }
 }

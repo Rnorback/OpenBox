@@ -1,11 +1,3 @@
-//
-//  WhiteBattery.swift
-//  BB2
-//
-//  Created by Rob Norback on 2/20/17.
-//  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
-//
-
 import UIKit
 
 class WhiteBattery: Puzzle {
@@ -19,7 +11,7 @@ class WhiteBattery: Puzzle {
             ProcessInfo.processInfo.isLowPowerModeEnabled == false
     }
     
-    func checkForSuccess(value isBatterModeChanged:Any?) {
+    func checkForSuccess(value:Any? = nil) {
         if isWhite {
             NotificationCenter.default.post(
                 name: Notification.Name(puzzleId.rawValue),

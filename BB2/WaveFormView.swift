@@ -1,17 +1,9 @@
-//
-//  WaveFormView.swift
-//  BB2
-//
-//  Created by Rob Norback on 3/21/17.
-//  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
-//
-
 import Foundation
 
 import UIKit
 import Darwin
 
-let pi = M_PI
+let pi = Double.pi
 
 @IBDesignable
 public class WaveformView: UIView {

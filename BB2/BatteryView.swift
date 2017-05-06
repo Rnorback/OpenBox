@@ -1,11 +1,3 @@
-//
-//  BatteryView.swift
-//  BB2
-//
-//  Created by Rob Norback on 3/18/17.
-//  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
-//
-
 import UIKit
 
 class BatteryView: UIView {
@@ -47,7 +39,7 @@ class BatteryView: UIView {
             animateFill()
         }
         
-        //add notification
+        //observe the puzzle id
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(BatteryView.handle(withNotification:)),
