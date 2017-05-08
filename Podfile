@@ -17,5 +17,10 @@ target 'BB2' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
+  target 'OpenBoxExtension' do
+    inherit! :search_paths
+    pod 'PromiseKit', '~> 4.0'
+  end
+  
 end

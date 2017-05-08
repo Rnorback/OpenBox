@@ -1,0 +1,6 @@
+framework module Pods_OpenBoxExtension {
+  umbrella header "Pods-OpenBoxExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

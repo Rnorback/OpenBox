@@ -13,8 +13,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
-        
+    
+        let lightVM = LightVM(
+            color: .purple,
+            center: CGPoint(x: 180, y: 55),
+            puzzleId: .todayExtension
+        )
+        let lightButton = LightButton(lightVM: lightVM)
+        view.addSubview(lightButton)
+    }
+    
+    func injected() {
+        viewDidLoad()
     }
     
     override func didReceiveMemoryWarning() {

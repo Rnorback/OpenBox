@@ -46,7 +46,12 @@
 		93ACE8331EC0D1B2001F8882 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ACE8321EC0D1B2001F8882 /* TodayViewController.swift */; };
 		93ACE8361EC0D1B2001F8882 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93ACE8341EC0D1B2001F8882 /* MainInterface.storyboard */; };
 		93ACE83A1EC0D1B2001F8882 /* OpenBoxExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 93ACE82F1EC0D1B1001F8882 /* OpenBoxExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		93ACE83E1EC0D27B001F8882 /* PuzzleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9333034A1E39B8EC00E2C957 /* PuzzleId.swift */; };
+		93ACE8421EC0D3F1001F8882 /* PuzzleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9333034A1E39B8EC00E2C957 /* PuzzleId.swift */; };
+		93ACE8431EC0D3F9001F8882 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386AA6E1E304A1B007239C8 /* Dot.swift */; };
+		93ACE8441EC0D3F9001F8882 /* LightVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9391668D1E54F20B00F93C87 /* LightVM.swift */; };
+		93ACE8451EC0D3F9001F8882 /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB211E3081AD005E44FB /* LightButton.swift */; };
+		93ACE8461EC0D46F001F8882 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB271E309B5C005E44FB /* Values.swift */; };
+		93ACE8471EC0D47B001F8882 /* AnimationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9330544C1E3A8C2C00AB7D91 /* AnimationError.swift */; };
 		93CC77F61E5BDF1200A7623A /* RedBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F51E5BDF1200A7623A /* RedBattery.swift */; };
 		93CC77F81E5BDF1B00A7623A /* GreenBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F71E5BDF1B00A7623A /* GreenBattery.swift */; };
 		93CC77FA1E5BDF2400A7623A /* WhiteBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F91E5BDF2400A7623A /* WhiteBattery.swift */; };
@@ -60,6 +65,7 @@
 		93E20F8A1E58E7040017F55F /* YellowBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F891E58E7040017F55F /* YellowBattery.swift */; };
 		93E20F8C1E58E7190017F55F /* BatteryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F8B1E58E7190017F55F /* BatteryVC.swift */; };
 		93E20F8E1E58E7270017F55F /* BatteryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E20F8D1E58E7270017F55F /* BatteryVM.swift */; };
+		CB4F6AB3FDB11D86359E16B7 /* Pods_OpenBoxExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDDCF9B5DE73E9EF20E5C9B /* Pods_OpenBoxExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +108,7 @@
 
 /* Begin PBXFileReference section */
 		5093326FA270E9AD78D626D1 /* Pods_BB2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BB2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDDCF9B5DE73E9EF20E5C9B /* Pods_OpenBoxExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenBoxExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D103234974380A7179B589E /* Pods-BB2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BB2UITests/Pods-BB2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7FBC9F34362A65786E4C2403 /* Pods-BB2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BB2Tests/Pods-BB2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1AED244CF280364BB49A /* Pods_BB2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BB2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +172,9 @@
 		B255FC23AD4670B8B9D74D2D /* Pods-BB2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2.release.xcconfig"; path = "Pods/Target Support Files/Pods-BB2/Pods-BB2.release.xcconfig"; sourceTree = "<group>"; };
 		B57B65A926BAC55AF9154ED5 /* Pods-BB2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BB2UITests/Pods-BB2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		BCAB88EFBA06AC83E6E859C3 /* Pods-BB2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BB2/Pods-BB2.debug.xcconfig"; sourceTree = "<group>"; };
+		CBACD1CAA5853A8434778793 /* Pods-OpenBoxExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenBoxExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenBoxExtension/Pods-OpenBoxExtension.release.xcconfig"; sourceTree = "<group>"; };
 		CFCDCF74E269FB191F4A4AD6 /* Pods-BB2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BB2Tests/Pods-BB2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F269FD1969F228F6278FE9DF /* Pods-OpenBoxExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenBoxExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenBoxExtension/Pods-OpenBoxExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93ACE8301EC0D1B1001F8882 /* NotificationCenter.framework in Frameworks */,
+				CB4F6AB3FDB11D86359E16B7 /* Pods_OpenBoxExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +470,8 @@
 				7FBC9F34362A65786E4C2403 /* Pods-BB2Tests.release.xcconfig */,
 				7D103234974380A7179B589E /* Pods-BB2UITests.debug.xcconfig */,
 				B57B65A926BAC55AF9154ED5 /* Pods-BB2UITests.release.xcconfig */,
+				F269FD1969F228F6278FE9DF /* Pods-OpenBoxExtension.debug.xcconfig */,
+				CBACD1CAA5853A8434778793 /* Pods-OpenBoxExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -471,6 +483,7 @@
 				5093326FA270E9AD78D626D1 /* Pods_BB2Tests.framework */,
 				8C0D1AED244CF280364BB49A /* Pods_BB2UITests.framework */,
 				9326D15C1EBE835A00D54CA2 /* NotificationCenter.framework */,
+				6EDDCF9B5DE73E9EF20E5C9B /* Pods_OpenBoxExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -546,9 +559,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93ACE83D1EC0D1B2001F8882 /* Build configuration list for PBXNativeTarget "OpenBoxExtension" */;
 			buildPhases = (
+				4C06CD30F6BB507EF36F4EC5 /* [CP] Check Pods Manifest.lock */,
 				93ACE82B1EC0D1B1001F8882 /* Sources */,
 				93ACE82C1EC0D1B1001F8882 /* Frameworks */,
 				93ACE82D1EC0D1B1001F8882 /* Resources */,
+				A250C7AE99ADC6F094C6A114 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -715,6 +730,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BB2/Pods-BB2-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4C06CD30F6BB507EF36F4EC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		52A3BA054CF8AADA93CCEB6E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -758,6 +788,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BB2UITests/Pods-BB2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A250C7AE99ADC6F094C6A114 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenBoxExtension/Pods-OpenBoxExtension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BBA201B9C7D8403F0E272736 /* [CP] Copy Pods Resources */ = {
@@ -860,8 +905,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93ACE83E1EC0D27B001F8882 /* PuzzleId.swift in Sources */,
+				93ACE8471EC0D47B001F8882 /* AnimationError.swift in Sources */,
+				93ACE8421EC0D3F1001F8882 /* PuzzleId.swift in Sources */,
+				93ACE8461EC0D46F001F8882 /* Values.swift in Sources */,
 				93ACE8331EC0D1B2001F8882 /* TodayViewController.swift in Sources */,
+				93ACE8431EC0D3F9001F8882 /* Dot.swift in Sources */,
+				93ACE8451EC0D3F9001F8882 /* LightButton.swift in Sources */,
+				93ACE8441EC0D3F9001F8882 /* LightVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1098,6 +1148,7 @@
 		};
 		93ACE83B1EC0D1B2001F8882 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F269FD1969F228F6278FE9DF /* Pods-OpenBoxExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1114,6 +1165,7 @@
 		};
 		93ACE83C1EC0D1B2001F8882 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBACD1CAA5853A8434778793 /* Pods-OpenBoxExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1174,6 +1226,7 @@
 				93ACE83C1EC0D1B2001F8882 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
