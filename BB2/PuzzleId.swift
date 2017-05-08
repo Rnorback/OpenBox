@@ -18,4 +18,6 @@ enum PuzzleId: String {
     case redBattery
     
     case hitTheFloor
+    
+    case todayExtension
 }

@@ -11,10 +11,6 @@
 		84665E4EFC78946B759F4B66 /* Pods_BB2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1AED244CF280364BB49A /* Pods_BB2UITests.framework */; };
 		847AE1724974BD79C9512CAF /* Pods_BB2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5093326FA270E9AD78D626D1 /* Pods_BB2Tests.framework */; };
 		930928491E3AC9D4007DEA67 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930928481E3AC9D4007DEA67 /* String+.swift */; };
-		9326D15D1EBE835A00D54CA2 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326D15C1EBE835A00D54CA2 /* NotificationCenter.framework */; };
-		9326D1601EBE835A00D54CA2 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326D15F1EBE835A00D54CA2 /* TodayViewController.swift */; };
-		9326D1631EBE835A00D54CA2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9326D1611EBE835A00D54CA2 /* MainInterface.storyboard */; };
-		9326D1671EBE835B00D54CA2 /* BB2 Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9326D15B1EBE835A00D54CA2 /* BB2 Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		932AF3B31E39E594007B8D5E /* ReadingPuzzleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF3B21E39E594007B8D5E /* ReadingPuzzleVC.swift */; };
 		9330544D1E3A8C2C00AB7D91 /* AnimationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9330544C1E3A8C2C00AB7D91 /* AnimationError.swift */; };
 		9333034B1E39B8EC00E2C957 /* PuzzleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9333034A1E39B8EC00E2C957 /* PuzzleId.swift */; };
@@ -46,6 +42,11 @@
 		939166921E54F30600F93C87 /* LevelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939166911E54F30600F93C87 /* LevelVM.swift */; };
 		939166981E54FF1600F93C87 /* WaitVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939166971E54FF1600F93C87 /* WaitVM.swift */; };
 		93AC43301E8228F200D0F43D /* WaveFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC432F1E8228F200D0F43D /* WaveFormView.swift */; };
+		93ACE8301EC0D1B1001F8882 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326D15C1EBE835A00D54CA2 /* NotificationCenter.framework */; };
+		93ACE8331EC0D1B2001F8882 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ACE8321EC0D1B2001F8882 /* TodayViewController.swift */; };
+		93ACE8361EC0D1B2001F8882 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93ACE8341EC0D1B2001F8882 /* MainInterface.storyboard */; };
+		93ACE83A1EC0D1B2001F8882 /* OpenBoxExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 93ACE82F1EC0D1B1001F8882 /* OpenBoxExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		93ACE83E1EC0D27B001F8882 /* PuzzleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9333034A1E39B8EC00E2C957 /* PuzzleId.swift */; };
 		93CC77F61E5BDF1200A7623A /* RedBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F51E5BDF1200A7623A /* RedBattery.swift */; };
 		93CC77F81E5BDF1B00A7623A /* GreenBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F71E5BDF1B00A7623A /* GreenBattery.swift */; };
 		93CC77FA1E5BDF2400A7623A /* WhiteBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F91E5BDF2400A7623A /* WhiteBattery.swift */; };
@@ -62,13 +63,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9326D1651EBE835B00D54CA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9386AA351E3045D6007239C8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9326D15A1EBE835A00D54CA2;
-			remoteInfo = "BB2 Widget";
-		};
 		9386AA521E3045D6007239C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9386AA351E3045D6007239C8 /* Project object */;
@@ -83,6 +77,13 @@
 			remoteGlobalIDString = 9386AA3C1E3045D6007239C8;
 			remoteInfo = BB2;
 		};
+		93ACE8381EC0D1B2001F8882 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9386AA351E3045D6007239C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93ACE82E1EC0D1B1001F8882;
+			remoteInfo = OpenBoxExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -92,7 +93,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9326D1671EBE835B00D54CA2 /* BB2 Widget.appex in Embed App Extensions */,
+				93ACE83A1EC0D1B2001F8882 /* OpenBoxExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,11 +106,7 @@
 		7FBC9F34362A65786E4C2403 /* Pods-BB2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BB2Tests/Pods-BB2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1AED244CF280364BB49A /* Pods_BB2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BB2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		930928481E3AC9D4007DEA67 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
-		9326D15B1EBE835A00D54CA2 /* BB2 Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BB2 Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9326D15C1EBE835A00D54CA2 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		9326D15F1EBE835A00D54CA2 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		9326D1621EBE835A00D54CA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		9326D1641EBE835A00D54CA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		932AF3B21E39E594007B8D5E /* ReadingPuzzleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingPuzzleVC.swift; sourceTree = "<group>"; };
 		9330544C1E3A8C2C00AB7D91 /* AnimationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationError.swift; sourceTree = "<group>"; };
 		9333034A1E39B8EC00E2C957 /* PuzzleId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleId.swift; sourceTree = "<group>"; };
@@ -147,6 +144,10 @@
 		939166911E54F30600F93C87 /* LevelVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelVM.swift; sourceTree = "<group>"; };
 		939166971E54FF1600F93C87 /* WaitVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitVM.swift; sourceTree = "<group>"; };
 		93AC432F1E8228F200D0F43D /* WaveFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveFormView.swift; sourceTree = "<group>"; };
+		93ACE82F1EC0D1B1001F8882 /* OpenBoxExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OpenBoxExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		93ACE8321EC0D1B2001F8882 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		93ACE8351EC0D1B2001F8882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		93ACE8371EC0D1B2001F8882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CC77F51E5BDF1200A7623A /* RedBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedBattery.swift; sourceTree = "<group>"; };
 		93CC77F71E5BDF1B00A7623A /* GreenBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenBattery.swift; sourceTree = "<group>"; };
 		93CC77F91E5BDF2400A7623A /* WhiteBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteBattery.swift; sourceTree = "<group>"; };
@@ -168,14 +169,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9326D1581EBE835A00D54CA2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9326D15D1EBE835A00D54CA2 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9386AA3A1E3045D6007239C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,19 +193,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93ACE82C1EC0D1B1001F8882 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93ACE8301EC0D1B1001F8882 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9326D15E1EBE835A00D54CA2 /* BB2 Widget */ = {
-			isa = PBXGroup;
-			children = (
-				9326D15F1EBE835A00D54CA2 /* TodayViewController.swift */,
-				9326D1611EBE835A00D54CA2 /* MainInterface.storyboard */,
-				9326D1641EBE835A00D54CA2 /* Info.plist */,
-			);
-			path = "BB2 Widget";
-			sourceTree = "<group>";
-		};
 		932AF3B41E39E59E007B8D5E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,7 +295,7 @@
 				9386AA3F1E3045D6007239C8 /* BB2 */,
 				9386AA541E3045D6007239C8 /* BB2Tests */,
 				9386AA5F1E3045D6007239C8 /* BB2UITests */,
-				9326D15E1EBE835A00D54CA2 /* BB2 Widget */,
+				93ACE8311EC0D1B1001F8882 /* OpenBoxExtension */,
 				9386AA3E1E3045D6007239C8 /* Products */,
 				AA2E2771859727FAC28D623B /* Pods */,
 				E6291931C6C1EF94F40F8536 /* Frameworks */,
@@ -317,7 +308,7 @@
 				9386AA3D1E3045D6007239C8 /* BB2.app */,
 				9386AA511E3045D6007239C8 /* BB2Tests.xctest */,
 				9386AA5C1E3045D6007239C8 /* BB2UITests.xctest */,
-				9326D15B1EBE835A00D54CA2 /* BB2 Widget.appex */,
+				93ACE82F1EC0D1B1001F8882 /* OpenBoxExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -388,6 +379,16 @@
 				939166891E54F1F200F93C87 /* MenuItem.swift */,
 			);
 			name = MainMenu;
+			sourceTree = "<group>";
+		};
+		93ACE8311EC0D1B1001F8882 /* OpenBoxExtension */ = {
+			isa = PBXGroup;
+			children = (
+				93ACE8321EC0D1B2001F8882 /* TodayViewController.swift */,
+				93ACE8341EC0D1B2001F8882 /* MainInterface.storyboard */,
+				93ACE8371EC0D1B2001F8882 /* Info.plist */,
+			);
+			path = OpenBoxExtension;
 			sourceTree = "<group>";
 		};
 		93E20F871E58BF660017F55F /* Wait */ = {
@@ -477,23 +478,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9326D15A1EBE835A00D54CA2 /* BB2 Widget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9326D16A1EBE835B00D54CA2 /* Build configuration list for PBXNativeTarget "BB2 Widget" */;
-			buildPhases = (
-				9326D1571EBE835A00D54CA2 /* Sources */,
-				9326D1581EBE835A00D54CA2 /* Frameworks */,
-				9326D1591EBE835A00D54CA2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "BB2 Widget";
-			productName = "BB2 Widget";
-			productReference = 9326D15B1EBE835A00D54CA2 /* BB2 Widget.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		9386AA3C1E3045D6007239C8 /* BB2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9386AA651E3045D6007239C8 /* Build configuration list for PBXNativeTarget "BB2" */;
@@ -509,7 +493,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9326D1661EBE835B00D54CA2 /* PBXTargetDependency */,
+				93ACE8391EC0D1B2001F8882 /* PBXTargetDependency */,
 			);
 			name = BB2;
 			productName = BB2;
@@ -558,6 +542,23 @@
 			productReference = 9386AA5C1E3045D6007239C8 /* BB2UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		93ACE82E1EC0D1B1001F8882 /* OpenBoxExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93ACE83D1EC0D1B2001F8882 /* Build configuration list for PBXNativeTarget "OpenBoxExtension" */;
+			buildPhases = (
+				93ACE82B1EC0D1B1001F8882 /* Sources */,
+				93ACE82C1EC0D1B1001F8882 /* Frameworks */,
+				93ACE82D1EC0D1B1001F8882 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenBoxExtension;
+			productName = OpenBoxExtension;
+			productReference = 93ACE82F1EC0D1B1001F8882 /* OpenBoxExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -568,15 +569,15 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Norback Solutions, LLC";
 				TargetAttributes = {
-					9326D15A1EBE835A00D54CA2 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = CBH54B9P5C;
-						ProvisioningStyle = Automatic;
-					};
 					9386AA3C1E3045D6007239C8 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = CBH54B9P5C;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					9386AA501E3045D6007239C8 = {
 						CreatedOnToolsVersion = 8.0;
@@ -590,9 +591,14 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9386AA3C1E3045D6007239C8;
 					};
+					93ACE82E1EC0D1B1001F8882 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = CBH54B9P5C;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
-			buildConfigurationList = 9386AA381E3045D6007239C8 /* Build configuration list for PBXProject "BB2" */;
+			buildConfigurationList = 9386AA381E3045D6007239C8 /* Build configuration list for PBXProject "OpenBox" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -608,20 +614,12 @@
 				9386AA3C1E3045D6007239C8 /* BB2 */,
 				9386AA501E3045D6007239C8 /* BB2Tests */,
 				9386AA5B1E3045D6007239C8 /* BB2UITests */,
-				9326D15A1EBE835A00D54CA2 /* BB2 Widget */,
+				93ACE82E1EC0D1B1001F8882 /* OpenBoxExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9326D1591EBE835A00D54CA2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9326D1631EBE835A00D54CA2 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9386AA3B1E3045D6007239C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -643,6 +641,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93ACE82D1EC0D1B1001F8882 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93ACE8361EC0D1B2001F8882 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,14 +793,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9326D1571EBE835A00D54CA2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9326D1601EBE835A00D54CA2 /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9386AA391E3045D6007239C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -858,14 +856,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93ACE82B1EC0D1B1001F8882 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93ACE83E1EC0D27B001F8882 /* PuzzleId.swift in Sources */,
+				93ACE8331EC0D1B2001F8882 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9326D1661EBE835B00D54CA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9326D15A1EBE835A00D54CA2 /* BB2 Widget */;
-			targetProxy = 9326D1651EBE835B00D54CA2 /* PBXContainerItemProxy */;
-		};
 		9386AA531E3045D6007239C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9386AA3C1E3045D6007239C8 /* BB2 */;
@@ -876,17 +878,14 @@
 			target = 9386AA3C1E3045D6007239C8 /* BB2 */;
 			targetProxy = 9386AA5D1E3045D6007239C8 /* PBXContainerItemProxy */;
 		};
+		93ACE8391EC0D1B2001F8882 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93ACE82E1EC0D1B1001F8882 /* OpenBoxExtension */;
+			targetProxy = 93ACE8381EC0D1B2001F8882 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9326D1611EBE835A00D54CA2 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9326D1621EBE835A00D54CA2 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 		9386AA441E3045D6007239C8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -903,41 +902,17 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		93ACE8341EC0D1B2001F8882 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93ACE8351EC0D1B2001F8882 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9326D1681EBE835B00D54CA2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				DEVELOPMENT_TEAM = CBH54B9P5C;
-				INFOPLIST_FILE = "BB2 Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.robnorback.BB2.BB2-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		9326D1691EBE835B00D54CA2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				DEVELOPMENT_TEAM = CBH54B9P5C;
-				INFOPLIST_FILE = "BB2 Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.robnorback.BB2.BB2-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 		9386AA631E3045D6007239C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1121,18 +1096,42 @@
 			};
 			name = Release;
 		};
+		93ACE83B1EC0D1B2001F8882 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = CBH54B9P5C;
+				INFOPLIST_FILE = OpenBoxExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robnorback.BB2.OpenBoxExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		93ACE83C1EC0D1B2001F8882 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = CBH54B9P5C;
+				INFOPLIST_FILE = OpenBoxExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robnorback.BB2.OpenBoxExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9326D16A1EBE835B00D54CA2 /* Build configuration list for PBXNativeTarget "BB2 Widget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9326D1681EBE835B00D54CA2 /* Debug */,
-				9326D1691EBE835B00D54CA2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		9386AA381E3045D6007239C8 /* Build configuration list for PBXProject "BB2" */ = {
+		9386AA381E3045D6007239C8 /* Build configuration list for PBXProject "OpenBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9386AA631E3045D6007239C8 /* Debug */,
@@ -1167,6 +1166,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		93ACE83D1EC0D1B2001F8882 /* Build configuration list for PBXNativeTarget "OpenBoxExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93ACE83B1EC0D1B2001F8882 /* Debug */,
+				93ACE83C1EC0D1B2001F8882 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

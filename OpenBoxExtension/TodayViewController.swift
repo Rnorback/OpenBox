@@ -1,3 +1,11 @@
+//
+//  TodayViewController.swift
+//  OpenBoxExtension
+//
+//  Created by Rob Norback on 5/8/17.
+//  Copyright © 2017 Norback Solutions, LLC. All rights reserved.
+//
+
 import UIKit
 import NotificationCenter
 
@@ -6,6 +14,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+        
     }
     
     override func didReceiveMemoryWarning() {
