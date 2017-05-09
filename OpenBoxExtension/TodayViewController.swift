@@ -32,6 +32,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func tapped() {
         print("Background tapped")
+        let url = URL(string: "openbox://")!
+        extensionContext?.open(url , completionHandler: nil)
     }
     
     func injected() {

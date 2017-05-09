@@ -4,6 +4,17 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>openbox</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>com.robnorback.BB2</string>
+		</dict>
+	</array>
 	<key>CFBundleDisplayName</key>
 	<string>Open Box</string>
 	<key>CFBundleExecutable</key>
