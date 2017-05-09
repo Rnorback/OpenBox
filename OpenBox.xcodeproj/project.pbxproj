@@ -1154,7 +1154,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = CBH54B9P5C;
 				INFOPLIST_FILE = OpenBoxExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.robnorback.BB2.OpenBoxExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1171,7 +1171,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = CBH54B9P5C;
 				INFOPLIST_FILE = OpenBoxExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.robnorback.BB2.OpenBoxExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";

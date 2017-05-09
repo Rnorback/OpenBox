@@ -13,25 +13,31 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         let lightVM = LightVM(
             color: .purple,
-            center: CGPoint(x: 180, y: 55),
+            center: CGPoint(x: 180, y: 50),
             puzzleId: .todayExtension
         )
         let lightButton = LightButton(lightVM: lightVM)
         view.addSubview(lightButton)
+        
+        view.backgroundColor = .black
+        view.alpha = 0.8
+        
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.addTarget(self, action: #selector(TodayViewController.tapped))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    func tapped() {
+        print("Background tapped")
     }
     
     func injected() {
         viewDidLoad()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
         
