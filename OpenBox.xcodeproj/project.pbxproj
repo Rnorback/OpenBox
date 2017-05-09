@@ -52,6 +52,8 @@
 		93ACE8451EC0D3F9001F8882 /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB211E3081AD005E44FB /* LightButton.swift */; };
 		93ACE8461EC0D46F001F8882 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EBB271E309B5C005E44FB /* Values.swift */; };
 		93ACE8471EC0D47B001F8882 /* AnimationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9330544C1E3A8C2C00AB7D91 /* AnimationError.swift */; };
+		93ACE84A1EC1B690001F8882 /* shatter.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93ACE8481EC1B690001F8882 /* shatter.wav */; };
+		93ACE84B1EC1B690001F8882 /* clink.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93ACE8491EC1B690001F8882 /* clink.wav */; };
 		93CC77F61E5BDF1200A7623A /* RedBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F51E5BDF1200A7623A /* RedBattery.swift */; };
 		93CC77F81E5BDF1B00A7623A /* GreenBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F71E5BDF1B00A7623A /* GreenBattery.swift */; };
 		93CC77FA1E5BDF2400A7623A /* WhiteBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CC77F91E5BDF2400A7623A /* WhiteBattery.swift */; };
@@ -155,6 +157,8 @@
 		93ACE8321EC0D1B2001F8882 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		93ACE8351EC0D1B2001F8882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		93ACE8371EC0D1B2001F8882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93ACE8481EC1B690001F8882 /* shatter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shatter.wav; sourceTree = "<group>"; };
+		93ACE8491EC1B690001F8882 /* clink.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clink.wav; sourceTree = "<group>"; };
 		93CC77F51E5BDF1200A7623A /* RedBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedBattery.swift; sourceTree = "<group>"; };
 		93CC77F71E5BDF1B00A7623A /* GreenBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenBattery.swift; sourceTree = "<group>"; };
 		93CC77F91E5BDF2400A7623A /* WhiteBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteBattery.swift; sourceTree = "<group>"; };
@@ -394,6 +398,8 @@
 		93ACE8311EC0D1B1001F8882 /* OpenBoxExtension */ = {
 			isa = PBXGroup;
 			children = (
+				93ACE8481EC1B690001F8882 /* shatter.wav */,
+				93ACE8491EC1B690001F8882 /* clink.wav */,
 				93ACE8321EC0D1B2001F8882 /* TodayViewController.swift */,
 				93ACE8341EC0D1B2001F8882 /* MainInterface.storyboard */,
 				93ACE8371EC0D1B2001F8882 /* Info.plist */,
@@ -663,6 +669,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93ACE84B1EC1B690001F8882 /* clink.wav in Resources */,
+				93ACE84A1EC1B690001F8882 /* shatter.wav in Resources */,
 				93ACE8361EC0D1B2001F8882 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
